@@ -1,0 +1,73 @@
+.BuildControls {
+	width: 100%;
+	background-color: #CF8F2E;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	box-shadow: 0 2px 1px #ccc;
+	margin: auto;
+	padding: 10px 0;
+}
+.OrderButton {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	margin: 12px 0;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.OrderButton:hover {
+	background-color:#ffab23;
+}
+.OrderButton:active {
+	position:relative;
+	top:1px;
+}
+.OrderButton:disabled {
+	box-shadow-color: #ffffff;
+	background-color:#f0f0f0;
+	border-color: #ffffff;
+	color:#808080;
+	text-shadow:none;
+}
+.myButton:hover {
+	background-color:#326616;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.OrderButton:not(:disabled) {
+	animation: tada 2s infinite both;
+}
+@keyframes tada {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+  -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }

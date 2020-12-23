@@ -1,0 +1,1311 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"A",
+				"Aux"
+			],
+			[
+				"mod",
+				"modalClosedHandler"
+			],
+			[
+				"pu",
+				"purchasing"
+			],
+			[
+				"stat",
+				"state"
+			],
+			[
+				"state",
+				"setState"
+			],
+			[
+				"rg",
+				"rgba()\tbackground"
+			],
+			[
+				"traNS",
+				"translateY"
+			],
+			[
+				"pur",
+				"purchase"
+			],
+			[
+				"p",
+				"purchasing"
+			],
+			[
+				"PU",
+				"purchasing"
+			],
+			[
+				"in",
+				"imgredientSummary"
+			],
+			[
+				"O",
+				"OrderSummary"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"tr",
+				"transition\tproperty"
+			],
+			[
+				"box",
+				"box-sizing\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"Modal",
+				"Modal"
+			],
+			[
+				"class",
+				"classes"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"ing",
+				"ingredients"
+			],
+			[
+				"o",
+				"orderBtnDisabled"
+			],
+			[
+				"L",
+				"Label"
+			],
+			[
+				"up",
+				"updatedPrice"
+			],
+			[
+				"price",
+				"priceAddition"
+			],
+			[
+				"update",
+				"updatedIngredients"
+			],
+			[
+				"bor",
+				"border-color\tproperty"
+			],
+			[
+				"Bui",
+				"BuildControl"
+			],
+			[
+				"bU",
+				"BuildControl"
+			],
+			[
+				"Bi",
+				"BuildControl"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"fon",
+				"font-weight\tproperty"
+			],
+			[
+				"Ba",
+				"background-color\tproperty"
+			],
+			[
+				"sp",
+				"space-between\tjustify-content"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"flex",
+				"flex-flow\tproperty"
+			],
+			[
+				"DI",
+				"display\tproperty"
+			],
+			[
+				"BAC",
+				"background-color\tproperty"
+			],
+			[
+				"t",
+				"transpormedIngredients"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"prp",
+				"PropTypes"
+			],
+			[
+				"Bu",
+				"BurgerIngrediends"
+			],
+			[
+				"B",
+				"BurgerIngrediends"
+			],
+			[
+				"b",
+				"bread-top"
+			],
+			[
+				"C",
+				"Content"
+			],
+			[
+				"Burger",
+				"BurgerBuilde"
+			],
+			[
+				"au",
+				"Aux"
+			],
+			[
+				"auth",
+				"authContext"
+			],
+			[
+				"use",
+				"useContext"
+			],
+			[
+				"Auth",
+				"AuthContext"
+			],
+			[
+				"P",
+				"Provider"
+			],
+			[
+				"aut",
+				"AuthContext"
+			],
+			[
+				"login",
+				"loginHandler"
+			],
+			[
+				"to",
+				"toggleBtnRef"
+			],
+			[
+				"TO",
+				"toggleBtnRef"
+			],
+			[
+				"inp",
+				"inputElement"
+			],
+			[
+				"fun",
+				"func"
+			],
+			[
+				"chan",
+				"changeCounter"
+			],
+			[
+				"fR",
+				"Fragment"
+			],
+			[
+				"pe",
+				"persons"
+			],
+			[
+				"next",
+				"nextProps"
+			],
+			[
+				"show",
+				"showCockpit"
+			],
+			[
+				"c",
+				"cockpit"
+			],
+			[
+				"pre",
+				"Persons"
+			],
+			[
+				"e",
+				"errorMessage"
+			],
+			[
+				"erro",
+				"error"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"button",
+				"buttonClasses"
+			],
+			[
+				"sty",
+				"StyleRoot"
+			],
+			[
+				"S",
+				"StyleRoot"
+			],
+			[
+				"person",
+				"persons"
+			],
+			[
+				"CLASS",
+				"classes"
+			],
+			[
+				"FONT",
+				"font-weight\tproperty"
+			],
+			[
+				"char",
+				"charList"
+			],
+			[
+				"cha",
+				"Char"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"name",
+				"nameChangeHandler"
+			],
+			[
+				"pro",
+				"props"
+			],
+			[
+				"bo",
+				"border\tproperty"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"pint",
+				"pointCount"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"TAB",
+				"tablica"
+			],
+			[
+				"render",
+				"renderBaloon"
+			],
+			[
+				"pa",
+				"parseFloat"
+			],
+			[
+				"parse",
+				"parseFloat"
+			],
+			[
+				"ballon",
+				"balloon-container"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"pump",
+				"pumpId"
+			],
+			[
+				"un",
+				"unactivePump"
+			],
+			[
+				"lim",
+				"limesurvey-balon"
+			],
+			[
+				"sur",
+				"surveyUrl"
+			],
+			[
+				"rand",
+				"rand-1"
+			],
+			[
+				"fi",
+				"firstRun"
+			],
+			[
+				"ma",
+				"maxPumpNum"
+			],
+			[
+				"rando",
+				"randomIndex"
+			],
+			[
+				"expl",
+				"explodeArray"
+			],
+			[
+				"exp",
+				"explodeArray"
+			],
+			[
+				"EX",
+				"explodeArray"
+			],
+			[
+				"boo",
+				"bottom"
+			],
+			[
+				"url",
+				"URLId"
+			],
+			[
+				"max",
+				"maxPumpNum"
+			],
+			[
+				"li",
+				"licznik"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"my",
+				"myButton"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"get",
+				"getRandomInt"
+			],
+			[
+				"pla",
+				"playCountDiv"
+			],
+			[
+				"play",
+				"playCountDiv"
+			],
+			[
+				"bu",
+				"buttonPump"
+			],
+			[
+				"se",
+				"setActivePump"
+			],
+			[
+				"ac",
+				"setActivePump"
+			],
+			[
+				"acti",
+				"pumpActive"
+			],
+			[
+				"butt",
+				"buttonPump"
+			],
+			[
+				"so",
+				"showTotal"
+			],
+			[
+				"s",
+				"showCurrent"
+			],
+			[
+				"ge",
+				"getItem"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"KE",
+				"keyCount"
+			],
+			[
+				"key",
+				"keyCount"
+			],
+			[
+				"cont",
+				"const"
+			],
+			[
+				"va",
+				"valve2"
+			],
+			[
+				"new",
+				"newData"
+			],
+			[
+				"sql",
+				"sql2"
+			],
+			[
+				"sto",
+				"stored_data"
+			],
+			[
+				"data",
+				"DataProvider"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
+			"settings":
+			{
+				"buffer_size": 2993,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/UI/Button/Button.js",
+			"settings":
+			{
+				"buffer_size": 225,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "import"
+			}
+		},
+		{
+			"file": "src/components/UI/Button/Button.module.css",
+			"settings":
+			{
+				"buffer_size": 605,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/OrderSummary/OrderSummary.js",
+			"settings":
+			{
+				"buffer_size": 529,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/UI/Modal/Modal.js",
+			"settings":
+			{
+				"buffer_size": 487,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/BuildControls/BuildControls.js",
+			"settings":
+			{
+				"buffer_size": 986,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/UI/Backdrop/Backdrop.js",
+			"settings":
+			{
+				"buffer_size": 217,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": ".Backdrop {\n\twidth: 100%;\n\theight: 100%;\n\tposition: fixed;\n\tz-index: 100;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(0,0,0,0.5);\n}",
+			"file": "src/components/UI/Backdrop/Backdrop.module.css",
+			"file_size": 132,
+			"file_write_time": 132530037306810524,
+			"settings":
+			{
+				"buffer_size": 130,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
+			"settings":
+			{
+				"buffer_size": 506,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/BuildControls/BuildControls.module.css",
+			"settings":
+			{
+				"buffer_size": 1564,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
+			"settings":
+			{
+				"buffer_size": 909,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/Burger.js",
+			"settings":
+			{
+				"buffer_size": 756,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 203.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"temin",
+				"Terminal: Open in project folder"
+			],
+			[
+				"termin",
+				"Terminal: Open in project folder"
+			],
+			[
+				"te",
+				"Terminal: Open in project folder"
+			],
+			[
+				"term",
+				"Terminal: Open in project folder"
+			],
+			[
+				"termina",
+				"Terminal: Open"
+			],
+			[
+				"bab",
+				"Babel Transform"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sftp di",
+				"SFTP: Edit Remote Mapping…"
+			],
+			[
+				"sft",
+				"SFTP: Map to Remote…"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"pa",
+				"SFTP: Show Panel"
+			],
+			[
+				"sftp",
+				"SFTP: Show Panel"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"LiveReload: Enable",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"yarn start",
+			"dir"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/public",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Backdrop",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc"
+	],
+	"file_history":
+	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Auxiliary.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients/BurgerIngredient.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients/BurgerIngredient.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burger.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/ BuildControl/BuildControl.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/ BuildControl/BuildControl.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/App.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burgeringridients/Burgeringridients.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBulder/BurgerBuilder.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/public/index.html",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/project.sublime-project",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/config/webpack.config.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/.git/COMMIT_EDITMSG",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/.git/COMMIT_EDITMSG",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/hoc/withClass.js",
+		"/C/Users/lenovo/Desktop/kurs/NOTATKI/UZYWANIE USE EFFECT COMPONENT DID MOUNT ZAPYTANIA HTTP.js",
+		"/C/Users/lenovo/Desktop/kurs/NOTATKI/owijanie komponentów do obslugi bledow lub zmiany styli.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/DO NAUCZENIA SIE JESZCZE RAZ",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/components/Cockpit/Cockpit.module.css",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/hoc/Auxiliary.js",
+		"/C/Users/lenovo/Desktop/kurs/DO NAUCZENIA SIE JESZCZE RAZ",
+		"/C/Users/lenovo/Desktop/kurs/NOTATKI/pamieć komponentów i przechwytywanie czegos co nie musi byc renderowane.js",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/Terminal.sublime-settings",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/containers/App.module.css",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/App.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/index.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/components/Cockpit/Cockpit.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/App.css",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/App.module.css",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/Person/Person.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/ErrorBoundary/ErrorBoundary.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/Persons/Persons.js",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/src/Person/Person.module.css",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/package.json",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/.gitignore",
+		"/C/xampp/htdocs/controller/web/test.php",
+		"/C/xampp/htdocs/controller/web/sftp-config.json",
+		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/README.md",
+		"/C/xampp/htdocs/ankieta/index.html",
+		"/C/xampp/htdocs/gra/sftp-config.json",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/SFTP/SFTP.sublime-settings",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/SFTP/Default (Windows).sublime-keymap",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/SFTP.sublime-settings",
+		"/C/xampp/htdocs/ankieta/BART_PL/Materials/StopSignalStimList.xls",
+		"/C/Users/lenovo/Downloads/nagranie.MP3",
+		"/C/Users/lenovo/AppData/Local/Temp/Rar$DRa0.796/Table_Fixed_Header/index.html",
+		"/C/xampp/htdocs/lista/zaproszenia-na-chrzest-poprawione.txt",
+		"/C/xampp/htdocs/lista/test.html",
+		"/C/xampp/htdocs/lista/server.php",
+		"/C/xampp/htdocs/lista/data.json",
+		"/C/xampp/htdocs/ReadingVoltage/prod/api.php",
+		"/C/xampp/htdocs/ReadingVoltage/api.php",
+		"/C/xampp/htdocs/lista/style.css",
+		"/C/xampp/htdocs/lista/index.html",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/C/xampp/htdocs/lista/zaproszenia-na-chrzest-poprawione2.txt",
+		"/C/xampp/htdocs/lista/zaproszenia-na-chrzest-poprawione.doc"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"(\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								717,
+								717
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 462.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/components/UI/Button/Button.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								70
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import",
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/UI/Button/Button.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								444,
+								444
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 150.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/OrderSummary/OrderSummary.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/UI/Modal/Modal.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/Burger/BuildControls/BuildControls.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								853,
+								853
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/components/UI/Backdrop/Backdrop.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 9.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/UI/Backdrop/Backdrop.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/Burger/BuildControls/BuildControls.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1564,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								450,
+								450
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 121.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								873
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 493.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/components/Burger/Burger.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								260
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 15.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 102.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 238.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
