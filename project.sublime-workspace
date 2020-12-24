@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"t",
+				"Toolbar"
+			],
+			[
+				"pu",
+				"purchaseContinueHandler"
+			],
+			[
+				"Or",
+				"orderSummary"
+			],
+			[
+				"b",
+				"Button"
+			],
+			[
 				"ba",
 				"background-color\tproperty"
 			],
@@ -14,10 +30,6 @@
 			[
 				"mod",
 				"modalClosedHandler"
-			],
-			[
-				"pu",
-				"purchasing"
 			],
 			[
 				"stat",
@@ -156,10 +168,6 @@
 				"background-color\tproperty"
 			],
 			[
-				"t",
-				"transpormedIngredients"
-			],
-			[
 				"cla",
 				"classes"
 			],
@@ -174,10 +182,6 @@
 			[
 				"B",
 				"BurgerIngrediends"
-			],
-			[
-				"b",
-				"bread-top"
 			],
 			[
 				"C",
@@ -510,10 +514,6 @@
 			[
 				"sto",
 				"stored_data"
-			],
-			[
-				"data",
-				"DataProvider"
 			]
 		]
 	},
@@ -523,7 +523,43 @@
 			"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
 			"settings":
 			{
-				"buffer_size": 2993,
+				"buffer_size": 3214,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Layout/Layout.js",
+			"settings":
+			{
+				"buffer_size": 318,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Layout/Layout.module.css",
+			"settings":
+			{
+				"buffer_size": 31,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Logo/Logo.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/UI/Button/Button.module.css",
+			"settings":
+			{
+				"buffer_size": 712,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -532,26 +568,44 @@
 			"file": "src/components/UI/Button/Button.js",
 			"settings":
 			{
-				"buffer_size": 225,
+				"buffer_size": 256,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "import"
 			}
 		},
 		{
-			"file": "src/components/UI/Button/Button.module.css",
+			"file": "src/components/OrderSummary/OrderSummary.js",
 			"settings":
 			{
-				"buffer_size": 605,
+				"buffer_size": 891,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/OrderSummary/OrderSummary.js",
+			"file": "src/components/Navigation/Toolbar/Toolbar.js",
 			"settings":
 			{
-				"buffer_size": 529,
+				"buffer_size": 244,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
+			"settings":
+			{
+				"buffer_size": 269,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/OrderSummary/OrderSummary.module.css",
+			"settings":
+			{
+				"buffer_size": 104,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -561,15 +615,6 @@
 			"settings":
 			{
 				"buffer_size": 487,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/BuildControls/BuildControls.js",
-			"settings":
-			{
-				"buffer_size": 986,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -626,6 +671,15 @@
 			"settings":
 			{
 				"buffer_size": 756,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Burger/BuildControls/BuildControls.js",
+			"settings":
+			{
+				"buffer_size": 986,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -736,16 +790,11 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/public",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/assets",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Backdrop",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc"
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBuilder"
 	],
 	"file_history":
 	[
@@ -850,7 +899,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -859,15 +908,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2993,
+						"buffer_size": 3214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								717,
-								717
+								2777,
+								2777
 							]
 						],
 						"settings":
@@ -878,7 +927,7 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 462.0,
+						"translation.y": 589.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -886,19 +935,139 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/components/UI/Button/Button.js",
+					"file": "src/components/Layout/Layout.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 225,
+						"buffer_size": 318,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								213,
+								213
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/Layout/Layout.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/Logo/Logo.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/UI/Button/Button.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/UI/Button/Button.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
 							]
 						],
 						"settings":
@@ -911,53 +1080,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/components/UI/Button/Button.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 605,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								444,
-								444
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "src/components/OrderSummary/OrderSummary.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 529,
+						"buffer_size": 891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								314,
-								314
+								598,
+								598
 							]
 						],
 						"settings":
@@ -966,14 +1106,102 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 52.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "src/components/Navigation/Toolbar/Toolbar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/OrderSummary/OrderSummary.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								52
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "src/components/UI/Modal/Modal.js",
 					"semi_transient": false,
 					"settings":
@@ -999,43 +1227,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/components/Burger/BuildControls/BuildControls.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								853,
-								853
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 11,
 					"file": "src/components/UI/Backdrop/Backdrop.js",
 					"semi_transient": false,
 					"settings":
@@ -1060,11 +1256,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 12,
 					"file": "src/components/UI/Backdrop/Backdrop.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1089,11 +1285,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 13,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
 					"semi_transient": false,
 					"settings":
@@ -1120,11 +1316,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 14,
 					"file": "src/components/Burger/BuildControls/BuildControls.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1136,8 +1332,8 @@
 						"selection":
 						[
 							[
-								450,
-								450
+								51,
+								57
 							]
 						],
 						"settings":
@@ -1148,14 +1344,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 121.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 15,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1167,8 +1363,8 @@
 						"selection":
 						[
 							[
-								873,
-								873
+								104,
+								104
 							]
 						],
 						"settings":
@@ -1180,14 +1376,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 493.0,
+						"translation.y": 172.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 16,
 					"file": "src/components/Burger/Burger.js",
 					"semi_transient": false,
 					"settings":
@@ -1209,10 +1405,42 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 15.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "src/components/Burger/BuildControls/BuildControls.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
