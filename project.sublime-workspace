@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"A",
+				"Auxiliary"
+			],
+			[
+				"cla",
+				"classes"
+			],
+			[
+				"a",
+				"auto\twidth"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"tra",
+				"translateX()\ttransform"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"n",
+				"NavigationItems"
+			],
+			[
+				"border",
+				"border-color\tproperty"
+			],
+			[
+				"te",
+				"text-decoration-line\tproperty"
+			],
+			[
+				"Cl",
+				"className"
+			],
+			[
+				"Na",
+				"NavigationItems"
+			],
+			[
+				"nA",
+				"NavigationItem"
+			],
+			[
 				"t",
 				"Toolbar"
 			],
@@ -22,10 +70,6 @@
 			[
 				"ba",
 				"background-color\tproperty"
-			],
-			[
-				"A",
-				"Aux"
 			],
 			[
 				"mod",
@@ -166,10 +210,6 @@
 			[
 				"BAC",
 				"background-color\tproperty"
-			],
-			[
-				"cla",
-				"classes"
 			],
 			[
 				"prp",
@@ -420,10 +460,6 @@
 				"URLId"
 			],
 			[
-				"max",
-				"maxPumpNum"
-			],
-			[
 				"li",
 				"licznik"
 			],
@@ -434,10 +470,6 @@
 			[
 				"my",
 				"myButton"
-			],
-			[
-				"te",
-				"text-align"
 			],
 			[
 				"get",
@@ -482,38 +514,6 @@
 			[
 				"ge",
 				"getItem"
-			],
-			[
-				"lo",
-				"localStorage"
-			],
-			[
-				"KE",
-				"keyCount"
-			],
-			[
-				"key",
-				"keyCount"
-			],
-			[
-				"cont",
-				"const"
-			],
-			[
-				"va",
-				"valve2"
-			],
-			[
-				"new",
-				"newData"
-			],
-			[
-				"sql",
-				"sql2"
-			],
-			[
-				"sto",
-				"stored_data"
 			]
 		]
 	},
@@ -532,9 +532,17 @@
 			"file": "src/components/Layout/Layout.js",
 			"settings":
 			{
-				"buffer_size": 318,
+				"buffer_size": 397,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/App.js",
+			"settings":
+			{
+				"buffer_size": 345,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -550,7 +558,70 @@
 			"file": "src/components/Logo/Logo.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 243,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Logo/Logo.module.css",
+			"settings":
+			{
+				"buffer_size": 141,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
+			"settings":
+			{
+				"buffer_size": 426,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/SiteDrawer/SiteDrawer.js",
+			"settings":
+			{
+				"buffer_size": 551,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
+			"settings":
+			{
+				"buffer_size": 396,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItems.module.css",
+			"settings":
+			{
+				"buffer_size": 209,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+			"settings":
+			{
+				"buffer_size": 300,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
+			"settings":
+			{
+				"buffer_size": 762,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -587,7 +658,7 @@
 			"file": "src/components/Navigation/Toolbar/Toolbar.js",
 			"settings":
 			{
-				"buffer_size": 244,
+				"buffer_size": 411,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -596,7 +667,7 @@
 			"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
 			"settings":
 			{
-				"buffer_size": 269,
+				"buffer_size": 361,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -791,13 +862,21 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/public",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/assets",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/assets/images",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBuilder"
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal"
 	],
 	"file_history":
 	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/assets/images/logo.png",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Auxiliary.js",
@@ -881,6 +960,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"100",
 			"(\n"
 		],
 		"highlight": true,
@@ -899,7 +979,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -930,7 +1010,7 @@
 						"translation.y": 589.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -939,15 +1019,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 318,
+						"buffer_size": 397,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								213,
-								213
+								275,
+								275
 							]
 						],
 						"settings":
@@ -961,11 +1041,42 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "src/App.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "src/components/Layout/Layout.module.css",
 					"semi_transient": false,
 					"settings":
@@ -992,24 +1103,111 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "src/components/Logo/Logo.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/Logo/Logo.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
 							]
 						],
 						"settings":
@@ -1025,7 +1223,123 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
+					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 332.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/components/Navigation/NavigationItems/NavigationItems.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "src/components/UI/Button/Button.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1050,11 +1364,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 13,
 					"file": "src/components/UI/Button/Button.js",
 					"semi_transient": false,
 					"settings":
@@ -1080,11 +1394,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 14,
 					"file": "src/components/OrderSummary/OrderSummary.js",
 					"semi_transient": false,
 					"settings":
@@ -1109,24 +1423,24 @@
 						"translation.y": 52.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 15,
 					"file": "src/components/Navigation/Toolbar/Toolbar.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 244,
+						"buffer_size": 411,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								136,
-								136
+								334,
+								334
 							]
 						],
 						"settings":
@@ -1139,24 +1453,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 16,
 					"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 269,
+						"buffer_size": 361,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								96
+								306,
+								306
 							]
 						],
 						"settings":
@@ -1165,14 +1479,14 @@
 							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 32.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 17,
 					"file": "src/components/OrderSummary/OrderSummary.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1197,11 +1511,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 18,
 					"file": "src/components/UI/Modal/Modal.js",
 					"semi_transient": false,
 					"settings":
@@ -1227,11 +1541,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 19,
 					"file": "src/components/UI/Backdrop/Backdrop.js",
 					"semi_transient": false,
 					"settings":
@@ -1256,11 +1570,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 20,
 					"file": "src/components/UI/Backdrop/Backdrop.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1285,11 +1599,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 21,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
 					"semi_transient": false,
 					"settings":
@@ -1316,11 +1630,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 22,
 					"file": "src/components/Burger/BuildControls/BuildControls.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1347,11 +1661,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 23,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1379,11 +1693,11 @@
 						"translation.y": 172.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 24,
 					"file": "src/components/Burger/Burger.js",
 					"semi_transient": false,
 					"settings":
@@ -1408,11 +1722,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 25,
 					"file": "src/components/Burger/BuildControls/BuildControls.js",
 					"semi_transient": false,
 					"settings":
@@ -1440,7 +1754,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 19,
 					"type": "text"
 				}
 			]
@@ -1531,7 +1845,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 238.0,
+	"side_bar_width": 241.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
