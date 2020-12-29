@@ -1,18 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Aux from '../../hoc/Auxiliary';
 import classes from './Layout.module.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SiteDrawer from '../Navigation/SiteDrawer/SiteDrawer';
 
-const Layout = ( props ) => (
-	<Aux>
-		<Toolbar />
-		<SiteDrawer />
-		<main className={classes.Content}>
-			{props.children}
-		</main>	
-	</Aux>
+class Layout extends Component {
+	state = {
+		siteDrawerShow : false
+	};
+
+	setSiteDrawerClose = () => {
+		this.setState({siteDrawerShow: false})
+	};
+
+	setSiteDrawerOpen = () => {
+		this.setState({siteDrawerShow: true})
+	};
+
+	siteDrawerToggle = () => {
+		this.setState({siteDrawerShow: !this.siteDrawerShow})
+	}
 	
-);
+
+	render() {
+		return(
+			<Aux>
+				<Toolbar drawerToggleClicked={this.siteDrawerToggle}/>
+				<SiteDrawer
+					open={this.state.siteDrawerShow}
+					closed={this.setSiteDrawerClose} />
+				<main className={classes.Content}>
+					{this.props.children}
+				</main>	
+			</Aux>
+
+		)
+	}
+	
+	
+}
 
 export default Layout;

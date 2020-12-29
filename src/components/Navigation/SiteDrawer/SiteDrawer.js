@@ -7,10 +7,13 @@ import Backdrop from '../../UI/Backdrop/Backdrop';
 
 const siteDrawer = (props) => {
 
+	let attechedClasses = [classes.SiteDrawer, classes.Close];
+	if (props.open) attechedClasses = [classes.SiteDrawer, classes.Open];
+
 	return(
 		<Aux>
-			<Backdrop show={props.show}/>
-			<div className={classes.SiteDrawer}>
+			<Backdrop show={props.open} clicked={props.closed}/>
+			<div className={attechedClasses.join(' ')}>
 				<div className={classes.Logo}>
 					<Logo />
 				</div>
