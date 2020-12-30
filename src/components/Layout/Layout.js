@@ -18,14 +18,19 @@ class Layout extends Component {
 	};
 
 	siteDrawerToggle = () => {
-		this.setState({siteDrawerShow: !this.siteDrawerShow})
+		this.setState((prevState) => {
+			return {siteDrawerShow: !prevState.siteDrawerShow}
+			}
+		)
 	}
 	
 
 	render() {
 		return(
 			<Aux>
-				<Toolbar drawerToggleClicked={this.siteDrawerToggle}/>
+				<Toolbar
+					drawerToggleClicked={this.siteDrawerToggle}
+					clickedIcon={this.state.siteDrawerShow}/>
 				<SiteDrawer
 					open={this.state.siteDrawerShow}
 					closed={this.setSiteDrawerClose} />

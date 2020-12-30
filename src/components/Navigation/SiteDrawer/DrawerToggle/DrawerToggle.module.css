@@ -1,0 +1,26 @@
+.DrawerToggle {
+  width: 40px;
+}
+
+.DrawerToggle:after, 
+.DrawerToggle:before, 
+.DrawerToggle div {
+  background-color: #fff;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .1s ease-in-out;
+}
+.Active:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.Active:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+.Active:hover div {
+  transform: scale(0);
+}
