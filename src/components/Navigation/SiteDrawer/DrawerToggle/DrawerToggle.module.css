@@ -24,3 +24,9 @@
 .Active:hover div {
   transform: scale(0);
 }
+
+@media (min-width: 500px) {
+	.DrawerToggle {
+		display: none;
+	}
+}
