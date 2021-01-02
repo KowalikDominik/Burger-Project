@@ -3,8 +3,8 @@ import classes from './DrawerToggle.module.css';
 
 const drawerToggle = (props) => {
 
-let classesToggle = props.clickedIcon ? classes.Active : null;
-console.log('render'+classesToggle);
+const classesToggle = props.clickedIcon ? classes.Active : null;
+
 	return(
 		<div
 			onClick={props.clicked}
