@@ -1,5 +1,6 @@
 {
   "name": "burger-project",
+  "homepage": "https://kowalikdominik.github.io/Burger-Project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
