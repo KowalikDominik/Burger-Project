@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.deff4e79.chunk.css",
-    "main.js": "/build/static/js/main.d7259fda.chunk.js",
-    "main.js.map": "/build/static/js/main.d7259fda.chunk.js.map",
-    "runtime-main.js": "/build/static/js/runtime-main.3ad1d7b7.js",
-    "runtime-main.js.map": "/build/static/js/runtime-main.3ad1d7b7.js.map",
-    "static/js/2.5cf98387.chunk.js": "/build/static/js/2.5cf98387.chunk.js",
-    "static/js/2.5cf98387.chunk.js.map": "/build/static/js/2.5cf98387.chunk.js.map",
-    "static/js/3.aca50944.chunk.js": "/build/static/js/3.aca50944.chunk.js",
-    "static/js/3.aca50944.chunk.js.map": "/build/static/js/3.aca50944.chunk.js.map",
-    "index.html": "/build/index.html",
-    "static/css/main.deff4e79.chunk.css.map": "/build/static/css/main.deff4e79.chunk.css.map",
-    "static/js/2.5cf98387.chunk.js.LICENSE.txt": "/build/static/js/2.5cf98387.chunk.js.LICENSE.txt",
-    "static/media/logo.c38ca522.png": "/build/static/media/logo.c38ca522.png"
+    "main.css": "/Burger-Project/build/static/css/main.deff4e79.chunk.css",
+    "main.js": "/Burger-Project/build/static/js/main.d7259fda.chunk.js",
+    "main.js.map": "/Burger-Project/build/static/js/main.d7259fda.chunk.js.map",
+    "runtime-main.js": "/Burger-Project/build/static/js/runtime-main.8389528d.js",
+    "runtime-main.js.map": "/Burger-Project/build/static/js/runtime-main.8389528d.js.map",
+    "static/js/2.5cf98387.chunk.js": "/Burger-Project/build/static/js/2.5cf98387.chunk.js",
+    "static/js/2.5cf98387.chunk.js.map": "/Burger-Project/build/static/js/2.5cf98387.chunk.js.map",
+    "static/js/3.aca50944.chunk.js": "/Burger-Project/build/static/js/3.aca50944.chunk.js",
+    "static/js/3.aca50944.chunk.js.map": "/Burger-Project/build/static/js/3.aca50944.chunk.js.map",
+    "index.html": "/Burger-Project/build/index.html",
+    "static/css/main.deff4e79.chunk.css.map": "/Burger-Project/build/static/css/main.deff4e79.chunk.css.map",
+    "static/js/2.5cf98387.chunk.js.LICENSE.txt": "/Burger-Project/build/static/js/2.5cf98387.chunk.js.LICENSE.txt",
+    "static/media/logo.c38ca522.png": "/Burger-Project/build/static/media/logo.c38ca522.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.3ad1d7b7.js",
+    "static/js/runtime-main.8389528d.js",
     "static/js/2.5cf98387.chunk.js",
     "static/css/main.deff4e79.chunk.css",
     "static/js/main.d7259fda.chunk.js"
