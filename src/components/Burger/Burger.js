@@ -3,6 +3,7 @@ import BurgerIngredient from './BurgerIngredients/BurgerIngredient';
 import classes from './Burger.module.css';
 
 const burger = ( props ) => {
+	console.log(props);
 	let transpormedIngredients = Object.keys(props.ingredients)
 		.map(igKey => {
 			return [	...Array(props.ingredients[igKey])]
