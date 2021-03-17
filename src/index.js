@@ -7,7 +7,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 
 const app = (
-		<BrowserRouter basename="/Burger-Project/build/">
+		<BrowserRouter basename="/Burger-Project/">
 			<App />
 		</BrowserRouter>
 		);
