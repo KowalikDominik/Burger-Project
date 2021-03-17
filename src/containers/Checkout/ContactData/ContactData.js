@@ -5,6 +5,7 @@ import axios from '../../../axios-orders';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import { withRouter } from "react-router";
+import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
 	state = {
@@ -56,12 +57,12 @@ class ContactData extends Component {
 		<Aux>
 			<h4>Enter your contact data</h4>
 			<form>
-				<input className={classes.Input} type="text" name="name" placeholder="Your name" />
-				<input className={classes.Input} type="email" name="email" placeholder="Your e-mail" />
-				<input className={classes.Input} type="text" name="street" placeholder="Street name" />
-				<input className={classes.Input} type="text" name="postalCode" pattern="[0-9]{5}" placeholder="Postal code" />
-				<input className={classes.Input} type="text" name="city" placeholder="City name" />
-				<input className={classes.Input} type="tel" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Your phone number" />
+				<Input inputtype="input" label="Your Name:" type="text" name="name" placeholder="Your name" />
+				<Input inputtype="input" label="E-mail:" type="email" name="email" placeholder="Your e-mail" />
+				<Input inputtype="input" label="Street:" type="text" name="street" placeholder="Street name" />
+				<Input inputtype="input" label="Zip-code:" type="text" name="postalCode" pattern="[0-9]{5}" placeholder="Postal code" />
+				<Input inputtype="input" label="City:" type="text" name="city" placeholder="City name" />
+				<Input inputtype="input" label="Phone number" type="tel" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Your phone number" />
 				<Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
 			</form>
 		</Aux>);

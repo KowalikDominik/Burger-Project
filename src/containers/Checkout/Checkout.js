@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
 
+
 class Checkout extends Component {
 	state = {
 		ingredients: null,
@@ -32,14 +33,14 @@ class Checkout extends Component {
 	}
 
 	render () {
-console.log(this.props.match);
 		return (
 				<div>
+				<Route path="/checkout" exact>
 					<CheckoutSummary
 						ingredients={this.state.ingredients}
 						checkoutCancelled={this.checkoutCancelledHandler}
-						checkoutContinued={this.checkoutContinuedHandler} />
-				
+						checkoutContinued={this.checkoutContinuedHandler} />					
+				</Route>
 				<Route path={this.props.match.path + "/contact-data"}>
 					<ContactData
 						ingredients={this.state.ingredients}
