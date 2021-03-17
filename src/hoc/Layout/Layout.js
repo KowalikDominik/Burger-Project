@@ -22,8 +22,7 @@ class Layout extends Component {
 			return {siteDrawerShow: !prevState.siteDrawerShow}
 			}
 		)
-	}
-	
+	};
 
 	render() {
 		return(

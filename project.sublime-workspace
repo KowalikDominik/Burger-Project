@@ -5,7 +5,27 @@
 		[
 			[
 				"C",
-				"Checkout"
+				"ContactData"
+			],
+			[
+				"con",
+				"contact-data"
+			],
+			[
+				"quer",
+				"queryParam"
+			],
+			[
+				"Che",
+				"checkoutCancelled"
+			],
+			[
+				"l",
+				"link"
+			],
+			[
+				"cli",
+				"clickedHandler"
 			],
 			[
 				"Bu",
@@ -206,10 +226,6 @@
 			[
 				"Modal",
 				"Modal"
-			],
-			[
-				"con",
-				"console"
 			],
 			[
 				"ing",
@@ -498,22 +514,6 @@
 			[
 				"url",
 				"URLId"
-			],
-			[
-				"li",
-				"licznik"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"my",
-				"myButton"
-			],
-			[
-				"get",
-				"getRandomInt"
 			]
 		]
 	},
@@ -529,23 +529,12 @@
 			}
 		},
 		{
-			"contents": "import React, { Component } from 'react';\nimport Aux from '../../hoc/Auxiliary/Auxiliary';\nimport Burger from '../../components/Burger/Burger';\nimport BuildControls from '../../components/Burger/BuildControls/BuildControls';\nimport Modal from '../../components/UI/Modal/Modal';\nimport OrderSummary from '../../components/OrderSummary/OrderSummary';\nimport axios from '../../axios-orders';\nimport Spinner from '../../components/UI/Spinner/Spinner';\nimport withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';\n\n\nconst INGREDIENTS_PRICES = {\n\tsalad: 0.5,\n\tbacon: 1.2,\n\tcheese: 1,\n\tmeat: 3\n};\n\nconst BASIC_PRICE = 15;\n\nclass BurgerBuilder extends Component {\n\n\tstate = {\n\t\tingredients: null,\n\t\ttotalPrice: 0,\n\t\tpurchasable: false,\n\t\tpurchasing: false,\n\t\tloading: false,\n\t\terror: false\n\t};\n\n\tcomponentDidMount () {\n\t\taxios.get('ingredients.json')\n\t\t.then( response => {\n\t\t\tthis.setState({ingredients: response.data})\n\t\t})\n\t\t.catch(error => this.setState({error: true}));\n\t}\n\n\tpurchaseHandler = () => {\n\t\tthis.setState({purchasing: true})\n\t};\n\n\tpurchaseCancelHandler = () => {\n\t\tthis.setState({purchasing: false});\n\t};\n\tpurchaseContinueHandler = () => {\n\t\t//alert(\"You continue order!\");\n\t\tthis.setState({ loading: true });\n\t\tconst order = {\n\t\t\tingredients: this.state.ingredients,\n\t\t\tprice: this.state.totalPrice,\n\t\t\tcustomer: {\n\t\t\t\tname: 'Dominik Kowalik',\n\t\t\t\taddress: {\n\t\t\t\t\tstreet: 'wileńska 10',\n\t\t\t\t\tzipCode: '20-603',\n\t\t\t\t\tcountry: 'Poland'\n\t\t\t\t},\n\t\t\temail: 'gmko@gm.pl',\n\t\tdeliveryMethod: 'poczta'\n\t\t\t}\n\t\t}\n\t\taxios.post('orders.json',order)\n\t\t\t.then((response) => {\n\t\t\t\tthis.setState({ loading: false, purchasing: false });\n\t\t\t})\n\t\t\t.catch(error => this.setState({ loading: false, purchasing: false }));\n\t};\n\n\tupdatePurchaseState = (ingredients) => {\n\t\tconst sum = Object.keys(ingredients)\n\t\t\t.map(igKey => {\n\t\t\t\treturn ingredients[igKey]\n\t\t\t})\n\t\t\t.reduce((sum, el) => {\n\t\t\t\treturn sum + el;\n\t\t\t}, 0);\n\n\t\tthis.setState({purchasable: sum > 0});\n\t};\n\n\tingredientsAddHandler = (type) => {\n\t\tconst updatedIngredients = {\n\t\t\t...this.state.ingredients\n\t\t};\n\t\tconst oldCount = this.state.ingredients[type];\n\t\tconst updatedCount = oldCount + 1;\n\t\tupdatedIngredients[type] = updatedCount;\n\n\t\tconst priceAddition = INGREDIENTS_PRICES[type];\n\t\tconst oldPrice = this.state.totalPrice;\n\t\tlet basicPrice = 0;\n\t\tif ( oldPrice === 0 ) basicPrice = BASIC_PRICE\n\t\tconst updatedPrice = oldPrice + priceAddition + basicPrice;\n\n\t\tthis.setState({totalPrice: updatedPrice, ingredients: updatedIngredients});\n\t\tthis.updatePurchaseState(updatedIngredients);\n\t};\n\n\tingredientsRemoveHandler = (type) => {\n\t\tconst updatedIngredients = {\n\t\t\t...this.state.ingredients\n\t\t};\n\t\tconst oldCount = this.state.ingredients[type];\n\t\tif ( oldCount <=0 ) return;\n\t\tconst updatedCount = oldCount - 1;\n\t\tupdatedIngredients[type] = updatedCount;\n\n\t\tconst priceDeduction = INGREDIENTS_PRICES[type];\n\t\tconst oldPrice = this.state.totalPrice;\n\t\tlet fullDeduction = 0;\n\t\tif ( ( oldPrice - priceDeduction ) === BASIC_PRICE ) fullDeduction = BASIC_PRICE\n\t\tconst updatedPrice = oldPrice - priceDeduction - fullDeduction;\n\n\t\tthis.setState({totalPrice: updatedPrice, ingredients: updatedIngredients});\n\t\tthis.updatePurchaseState(updatedIngredients);\n\t} \n\t\n\trender () {\n\t\tconst disabled = {\n\t\t\t...this.state.ingredients\n\t\t};\n\t\tfor ( let key in disabled) {\n\t\t\tdisabled[key] = disabled[key] <= 0\n\t\t}\n\n\t\tlet orderSummary = null;\n\n\t\tif(this.state.loading){\n\t\t\torderSummary = <Spinner />;\n\t\t}\n\n\t\tlet burger = this.state.error ? <p>Cant load ingrediends to application.</p> : <Spinner />;\n\t\tif(this.state.ingredients){\n\t\t\tburger = (\n\t\t\t<Aux>\n\t\t\t\t<Burger ingredients={this.state.ingredients}/>\n\t\t\t\t<BuildControls\n\t\t\t\t\tingredientsAdded={this.ingredientsAddHandler}\n\t\t\t\t\tingredientsRemoved={this.ingredientsRemoveHandler}\n\t\t\t\t\tingredientCount={this.state.ingredients}\n\t\t\t\t\tprice={this.state.totalPrice}\n\t\t\t\t\tdisabled={disabled}\n\t\t\t\t\temptyOrder={!this.state.purchasable}\n\t\t\t\t\tpurchase={this.purchaseHandler}/>\n\t\t\t</Aux>);\n\t\t\t orderSummary = <OrderSummary\n\t\t\t\t\t\tingredients={this.state.ingredients}\n\t\t\t\t\t\tcancelledOrder={this.purchaseCancelHandler}\n\t\t\t\t\t\tcontinuedOrder={this.purchaseContinueHandler}\n\t\t\t\t\t\tprice={this.state.totalPrice}\n\t\t\t\t\t/>;\n\t\t}\n\t\treturn (\n\t\t\t<Aux>\n\t\t\t\t<Modal show={this.state.purchasing} close={this.purchaseCancelHandler}>\n\t\t\t\t\t{orderSummary}\n\t\t\t\t</Modal>\n\t\t\t\t{burger}\n\t\t\t</Aux>\n\t\t);\n\t}\n}\n\nexport default withErrorHandler(BurgerBuilder, axios);",
 			"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
-			"file_size": 4587,
-			"file_write_time": 132599289430372017,
 			"settings":
 			{
-				"buffer_size": 4421,
+				"buffer_size": 4813,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "import React, { lazy, Suspense } from 'react'\nimport ReactDOM from 'react-dom'\nimport { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom'\n\nconst FunComponent = (\n  lazy(() => (\n    import('./FunComponent')\n  ))\n)\n\nconst TerribleComponent = (\n  lazy(() => (\n    import('./TerribleComponent')\n  ))\n)\n\nconst TestComponent = (\n  lazy(() => (\n    import('./TestComponent')\n  ))\n)\n\nconst LoadingMessage = () => (\n  \"I'm loading...\"\n)\n\nconst App = () => (\n  <Router>\n    <div>\n      <header>\n        <nav>\n          <div>\n            <Link to=\"/\">\n              Home\n            </Link>\n          </div>\n\n          <div>\n            <Link to=\"/fun\">\n              Fun\n            </Link>\n          </div>\n\n          <div>\n            <Link to=\"/terrible\">\n              Terrible\n            </Link>\n          </div>\n        </nav>\n      </header>\n\n      <br />\n\n      <Suspense fallback={<LoadingMessage />}>\n        <Switch>\n          <Route path=\"/fun\">\n            <FunComponent />\n          </Route>\n\n          <Route path=\"/terrible\">\n            <TerribleComponent />\n          </Route>\n\n          <Route>\n            <TestComponent />\n          </Route>\n        </Switch>\n      </Suspense>\n    </div>\n  </Router>\n)\n",
-			"settings":
-			{
-				"buffer_size": 1236,
-				"line_ending": "Windows",
-				"name": "import React, { lazy, Suspense } from 'react'"
 			}
 		},
 		{
@@ -620,7 +609,7 @@
 			"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
 			"settings":
 			{
-				"buffer_size": 426,
+				"buffer_size": 433,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -656,7 +645,7 @@
 			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
 			"settings":
 			{
-				"buffer_size": 300,
+				"buffer_size": 388,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -819,7 +808,7 @@
 			"file": "src/components/Burger/Burger.js",
 			"settings":
 			{
-				"buffer_size": 756,
+				"buffer_size": 777,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -828,7 +817,7 @@
 			"file": "src/App.js",
 			"settings":
 			{
-				"buffer_size": 486,
+				"buffer_size": 621,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -837,7 +826,16 @@
 			"file": "src/containers/Checkout/Checkout.js",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 1127,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/containers/Checkout/ContactData/ContactData.js",
+			"settings":
+			{
+				"buffer_size": 899,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -846,7 +844,7 @@
 			"file": "src/components/Order/CheckoutSummary/CheckoutSummary.js",
 			"settings":
 			{
-				"buffer_size": 574,
+				"buffer_size": 621,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -855,8 +853,16 @@
 			"file": "src/index.js",
 			"settings":
 			{
-				"buffer_size": 563,
+				"buffer_size": 590,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/App.test.js",
+			"settings":
+			{
+				"buffer_size": 246,
 				"line_ending": "Unix"
 			}
 		},
@@ -1003,6 +1009,10 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/CheckoutSummary",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary",
@@ -1011,6 +1021,7 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBuilder",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/ContactData",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc"
 	],
 	"file_history":
@@ -1104,6 +1115,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"a",
 			"loader",
 			"dot",
 			"chase",
@@ -1160,7 +1172,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1169,15 +1181,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4421,
+						"buffer_size": 4813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1492,
-								1492
+								2076,
+								2076
 							]
 						],
 						"settings":
@@ -1188,7 +1200,7 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 766.0,
+						"translation.y": 1734.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
@@ -1196,37 +1208,6 @@
 				},
 				{
 					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1235,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "import React, { lazy, Suspense } from 'react'",
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "src/components/UI/Spinner/Spinner.js",
 					"semi_transient": false,
 					"settings":
@@ -1251,11 +1232,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "src/components/UI/Spinner/Spinner.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1283,11 +1264,11 @@
 						"translation.y": 847.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "src/components/Layout/Layout.js",
 					"semi_transient": false,
 					"settings":
@@ -1314,11 +1295,11 @@
 						"translation.y": 309.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1343,11 +1324,11 @@
 						"translation.y": 77.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "src/components/Layout/Layout.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1374,11 +1355,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "src/components/Logo/Logo.js",
 					"semi_transient": false,
 					"settings":
@@ -1403,11 +1384,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "src/components/Logo/Logo.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1432,24 +1413,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 426,
+						"buffer_size": 433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								368,
-								368
+								240,
+								240
 							]
 						],
 						"settings":
@@ -1461,11 +1442,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 10,
 					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.js",
 					"semi_transient": false,
 					"settings":
@@ -1490,11 +1471,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 11,
 					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1519,11 +1500,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 12,
 					"file": "src/components/Navigation/NavigationItems/NavigationItems.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1548,24 +1529,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 13,
 					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 300,
+						"buffer_size": 388,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								227,
+								227
 							]
 						],
 						"settings":
@@ -1579,11 +1560,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 14,
 					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1595,8 +1576,8 @@
 						"selection":
 						[
 							[
-								195,
-								195
+								113,
+								113
 							]
 						],
 						"settings":
@@ -1611,11 +1592,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "src/components/UI/Button/Button.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1640,14 +1621,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 228.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 16,
 					"file": "src/components/UI/Button/Button.js",
 					"semi_transient": false,
 					"settings":
@@ -1675,11 +1656,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 17,
 					"file": "src/components/OrderSummary/OrderSummary.js",
 					"semi_transient": false,
 					"settings":
@@ -1691,8 +1672,8 @@
 						"selection":
 						[
 							[
-								64,
-								64
+								747,
+								747
 							]
 						],
 						"settings":
@@ -1704,14 +1685,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 18,
 					"file": "src/components/Navigation/Toolbar/Toolbar.js",
 					"semi_transient": false,
 					"settings":
@@ -1740,11 +1721,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 19,
 					"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1772,11 +1753,11 @@
 						"translation.y": 32.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 20,
 					"file": "src/components/OrderSummary/OrderSummary.module.css",
 					"semi_transient": false,
 					"settings":
@@ -1803,11 +1784,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 21,
 					"file": "src/components/UI/Modal/Modal.js",
 					"semi_transient": false,
 					"settings":
@@ -1836,11 +1817,11 @@
 						"translation.y": 31.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 22,
 					"file": "build/index.html",
 					"semi_transient": false,
 					"settings":
@@ -1867,11 +1848,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 23,
 					"file": "build/asset-manifest.json",
 					"semi_transient": false,
 					"settings":
@@ -1900,11 +1881,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 24,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
@@ -1932,11 +1913,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 25,
 					"file": "src/axios-orders.js",
 					"semi_transient": false,
 					"settings":
@@ -1963,11 +1944,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 26,
 					"file": "src/components/UI/Backdrop/Backdrop.js",
 					"semi_transient": false,
 					"settings":
@@ -1994,11 +1975,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 27,
 					"file": "src/components/UI/Backdrop/Backdrop.module.css",
 					"semi_transient": false,
 					"settings":
@@ -2025,11 +2006,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 41,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 28,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
 					"semi_transient": false,
 					"settings":
@@ -2057,11 +2038,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 29,
 					"file": "src/components/Burger/BuildControls/BuildControls.module.css",
 					"semi_transient": false,
 					"settings":
@@ -2088,11 +2069,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 38,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 30,
 					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
 					"semi_transient": false,
 					"settings":
@@ -2120,24 +2101,24 @@
 						"translation.y": 172.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 31,
 					"file": "src/components/Burger/Burger.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 756,
+						"buffer_size": 777,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								213,
+								213
 							]
 						],
 						"settings":
@@ -2149,27 +2130,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 32,
 					"file": "src/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 486,
+						"buffer_size": 621,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								414,
-								414
+								418,
+								471
 							]
 						],
 						"settings":
@@ -2179,8 +2160,37 @@
 							"synced": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
-						"translation.x": 3.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "src/containers/Checkout/Checkout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1066,
+								1051
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 344.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -2188,86 +2198,24 @@
 				},
 				{
 					"buffer": 34,
-					"file": "src/containers/Checkout/Checkout.js",
+					"file": "src/containers/Checkout/ContactData/ContactData.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								204,
-								204
+								137,
+								137
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 35,
-					"file": "src/components/Order/CheckoutSummary/CheckoutSummary.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 36,
-					"file": "src/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -2278,7 +2226,100 @@
 					"type": "text"
 				},
 				{
+					"buffer": 35,
+					"file": "src/components/Order/CheckoutSummary/CheckoutSummary.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								263
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
 					"buffer": 37,
+					"file": "src/App.test.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 38,
 					"file": "src/components/Order/CheckoutSummary/CheckoutSummary.module.css",
 					"semi_transient": false,
 					"settings":
@@ -2303,11 +2344,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "src/hoc/Layout/Layout.js",
 					"semi_transient": false,
 					"settings":
@@ -2335,11 +2376,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 40,
 					"file": "src/components/UI/Modal/Modal.module.css",
 					"semi_transient": false,
 					"settings":
@@ -2367,11 +2408,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 41,
 					"file": "src/components/Burger/BuildControls/BuildControls.js",
 					"semi_transient": false,
 					"settings":
@@ -2399,7 +2440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 34,
 					"type": "text"
 				}
 			]
