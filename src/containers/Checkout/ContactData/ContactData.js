@@ -56,6 +56,7 @@ class ContactData extends Component {
 		let contactForm = (
 		<Aux>
 			<h4>Enter your contact data</h4>
+			<Button btnType="Danger">Autofill for testing</Button>	
 			<form>
 				<Input inputtype="input" label="Your Name:" type="text" name="name" placeholder="Your name" />
 				<Input inputtype="input" label="E-mail:" type="email" name="email" placeholder="Your e-mail" />

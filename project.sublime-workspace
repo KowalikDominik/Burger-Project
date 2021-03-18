@@ -4,11 +4,83 @@
 		"selected_items":
 		[
 			[
+				"box",
+				"box-sizing\tproperty"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"in",
+				"inputElement"
+			],
+			[
+				"o",
+				"outline\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"input",
+				"inputElement"
+			],
+			[
+				"inp",
+				"input"
+			],
+			[
+				"ing",
+				"ingr"
+			],
+			[
+				"stet",
+				"state"
+			],
+			[
+				"lo",
+				"loading"
+			],
+			[
+				"Na",
+				"NavLink"
+			],
+			[
 				"C",
-				"ContactData"
+				"component"
+			],
+			[
+				"me",
+				"messageContent"
+			],
+			[
+				"mess",
+				"messageContent"
 			],
 			[
 				"con",
+				"console"
+			],
+			[
+				"show",
+				"modalShow"
+			],
+			[
+				"set",
+				"setState"
+			],
+			[
+				"to",
+				"totalPrice"
+			],
+			[
+				"cn",
+				"contact-data"
+			],
+			[
+				"c",
 				"contact-data"
 			],
 			[
@@ -32,20 +104,12 @@
 				"Button"
 			],
 			[
-				"cla",
-				"classes"
-			],
-			[
 				"Ch",
 				"CheckoutSummary"
 			],
 			[
 				"ch",
 				"CheckoutSummary"
-			],
-			[
-				"ma",
-				"margin\tproperty"
 			],
 			[
 				"t",
@@ -148,10 +212,6 @@
 				"className"
 			],
 			[
-				"Na",
-				"NavigationItems"
-			],
-			[
 				"nA",
 				"NavigationItem"
 			],
@@ -200,10 +260,6 @@
 				"purchasing"
 			],
 			[
-				"in",
-				"imgredientSummary"
-			],
-			[
 				"O",
 				"OrderSummary"
 			],
@@ -216,24 +272,12 @@
 				"transition\tproperty"
 			],
 			[
-				"box",
-				"box-sizing\tproperty"
-			],
-			[
 				"back",
 				"background-color\tproperty"
 			],
 			[
 				"Modal",
 				"Modal"
-			],
-			[
-				"ing",
-				"ingredients"
-			],
-			[
-				"o",
-				"orderBtnDisabled"
 			],
 			[
 				"L",
@@ -336,16 +380,8 @@
 				"loginHandler"
 			],
 			[
-				"to",
-				"toggleBtnRef"
-			],
-			[
 				"TO",
 				"toggleBtnRef"
-			],
-			[
-				"inp",
-				"inputElement"
 			],
 			[
 				"fun",
@@ -362,14 +398,6 @@
 			[
 				"pe",
 				"persons"
-			],
-			[
-				"show",
-				"showCockpit"
-			],
-			[
-				"c",
-				"cockpit"
 			],
 			[
 				"pre",
@@ -486,365 +514,53 @@
 			[
 				"rand",
 				"rand-1"
-			],
-			[
-				"fi",
-				"firstRun"
-			],
-			[
-				"rando",
-				"randomIndex"
-			],
-			[
-				"expl",
-				"explodeArray"
-			],
-			[
-				"exp",
-				"explodeArray"
-			],
-			[
-				"EX",
-				"explodeArray"
-			],
-			[
-				"boo",
-				"bottom"
-			],
-			[
-				"url",
-				"URLId"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/hoc/withErrorHandler/withErrorHandler.js",
-			"settings":
-			{
-				"buffer_size": 1059,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
 			"settings":
 			{
-				"buffer_size": 4813,
+				"buffer_size": 4320,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/UI/Spinner/Spinner.js",
+			"file": "src/components/UI/Input/Input.js",
 			"settings":
 			{
-				"buffer_size": 184,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/UI/Spinner/Spinner.module.css",
-			"settings":
-			{
-				"buffer_size": 1380,
+				"buffer_size": 607,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
-				"name": ".Sk-chase {"
-			}
-		},
-		{
-			"contents": "import React, { Component } from 'react';\nimport Aux from '../../hoc/Auxiliary';\nimport classes from './Layout.module.css';\nimport Toolbar from '../Navigation/Toolbar/Toolbar';\nimport SiteDrawer from '../Navigation/SiteDrawer/SiteDrawer';\n\nclass Layout extends Component {\n\tstate = {\n\t\tsiteDrawerShow : false\n\t};\n\n\tsetSiteDrawerClose = () => {\n\t\tthis.setState({siteDrawerShow: false})\n\t};\n\n\tsetSiteDrawerOpen = () => {\n\t\tthis.setState({siteDrawerShow: true})\n\t};\n\n\tsiteDrawerToggle = () => {\n\t\tthis.setState((prevState) => {\n\t\t\treturn {siteDrawerShow: !prevState.siteDrawerShow}\n\t\t\t}\n\t\t)\n\t}\n\t\n\n\trender() {\n\t\treturn(\n\t\t\t<Aux>\n\t\t\t\t<Toolbar\n\t\t\t\t\tdrawerToggleClicked={this.siteDrawerToggle}\n\t\t\t\t\tclickedIcon={this.state.siteDrawerShow}/>\n\t\t\t\t<SiteDrawer\n\t\t\t\t\topen={this.state.siteDrawerShow}\n\t\t\t\t\tclosed={this.setSiteDrawerClose} />\n\t\t\t\t<main className={classes.Content}>\n\t\t\t\t\t{this.props.children}\n\t\t\t\t</main>\t\n\t\t\t</Aux>\n\n\t\t)\n\t}\n\t\n\t\n}\n\nexport default Layout;",
-			"file": "src/components/Layout/Layout.js",
-			"file_size": 1002,
-			"file_write_time": 132537813752999892,
-			"settings":
-			{
-				"buffer_size": 955,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.module.css",
-			"settings":
-			{
-				"buffer_size": 494,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": ".Content {\n\tmargin-top: 72px;\n}",
-			"file": "src/components/Layout/Layout.module.css",
-			"file_size": 33,
-			"file_write_time": 132531754347952899,
-			"settings":
-			{
-				"buffer_size": 31,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Logo/Logo.js",
-			"settings":
-			{
-				"buffer_size": 243,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Logo/Logo.module.css",
-			"settings":
-			{
-				"buffer_size": 141,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
-			"settings":
-			{
-				"buffer_size": 433,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/SiteDrawer/SiteDrawer.js",
-			"settings":
-			{
-				"buffer_size": 723,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
-			"settings":
-			{
-				"buffer_size": 396,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/NavigationItems/NavigationItems.module.css",
-			"settings":
-			{
-				"buffer_size": 209,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
-			"settings":
-			{
-				"buffer_size": 388,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
-			"settings":
-			{
-				"buffer_size": 762,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/UI/Button/Button.module.css",
-			"settings":
-			{
-				"buffer_size": 712,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/UI/Button/Button.js",
-			"settings":
-			{
-				"buffer_size": 256,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "import"
-			}
-		},
-		{
-			"file": "src/components/OrderSummary/OrderSummary.js",
-			"settings":
-			{
-				"buffer_size": 901,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/Toolbar/Toolbar.js",
-			"settings":
-			{
-				"buffer_size": 570,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
-			"settings":
-			{
-				"buffer_size": 402,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/OrderSummary/OrderSummary.module.css",
-			"settings":
-			{
-				"buffer_size": 104,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/UI/Modal/Modal.js",
-			"settings":
-			{
-				"buffer_size": 714,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "build/index.html",
-			"settings":
-			{
-				"buffer_size": 3295,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "build/asset-manifest.json",
-			"settings":
-			{
-				"buffer_size": 1365,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 171,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/axios-orders.js",
-			"settings":
-			{
-				"buffer_size": 157,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/UI/Backdrop/Backdrop.js",
-			"settings":
-			{
-				"buffer_size": 217,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": ".Backdrop {\n\twidth: 100%;\n\theight: 100%;\n\tposition: fixed;\n\tz-index: 100;\n\ttop: 0;\n\tleft: 0;\n\tbackground-color: rgba(0,0,0,0.5);\n}",
-			"file": "src/components/UI/Backdrop/Backdrop.module.css",
-			"file_size": 132,
-			"file_write_time": 132530037306810524,
-			"settings":
-			{
-				"buffer_size": 130,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
-			"settings":
-			{
-				"buffer_size": 506,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/BuildControls/BuildControls.module.css",
-			"settings":
-			{
-				"buffer_size": 1564,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
-			"settings":
-			{
-				"buffer_size": 909,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/Burger.js",
-			"settings":
-			{
-				"buffer_size": 777,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"name": "import Rea"
 			}
 		},
 		{
 			"file": "src/App.js",
 			"settings":
 			{
-				"buffer_size": 621,
+				"buffer_size": 659,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/UI/Input/Input.module.css",
+			"settings":
+			{
+				"buffer_size": 392,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/containers/Checkout/Checkout.js",
 			"settings":
 			{
-				"buffer_size": 1127,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/containers/Checkout/ContactData/ContactData.js",
-			"settings":
-			{
-				"buffer_size": 899,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Order/CheckoutSummary/CheckoutSummary.js",
-			"settings":
-			{
-				"buffer_size": 621,
+				"buffer_size": 1321,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -853,24 +569,80 @@
 			"file": "src/index.js",
 			"settings":
 			{
-				"buffer_size": 590,
+				"buffer_size": 591,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/App.test.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 246,
-				"line_ending": "Unix"
+				"buffer_size": 966,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/Order/CheckoutSummary/CheckoutSummary.module.css",
+			"file": "src/containers/Checkout/ContactData/ContactData.js",
 			"settings":
 			{
-				"buffer_size": 192,
+				"buffer_size": 2275,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/containers/Checkout/ContactData/ContactData.module.css",
+			"settings":
+			{
+				"buffer_size": 228,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/containers/Orders/Orders.js",
+			"settings":
+			{
+				"buffer_size": 1034,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "import Rea"
+			}
+		},
+		{
+			"file": "src/components/Order/Order.js",
+			"settings":
+			{
+				"buffer_size": 632,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Order/Order.module.css",
+			"settings":
+			{
+				"buffer_size": 139,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
+			"settings":
+			{
+				"buffer_size": 436,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+			"settings":
+			{
+				"buffer_size": 370,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -879,25 +651,16 @@
 			"file": "src/hoc/Layout/Layout.js",
 			"settings":
 			{
-				"buffer_size": 986,
+				"buffer_size": 985,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/UI/Modal/Modal.module.css",
+			"file": "src/components/Message/Message.js",
 			"settings":
 			{
-				"buffer_size": 324,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Burger/BuildControls/BuildControls.js",
-			"settings":
-			{
-				"buffer_size": 986,
+				"buffer_size": 583,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1009,23 +772,66 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Message",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/CheckoutSummary",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Input",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBuilder",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/ContactData",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc"
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Orders",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Layout",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/withErrorHandler"
 	],
 	"file_history":
 	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/withErrorHandler/withErrorHandler.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/App.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Spinner/Spinner.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Spinner/Spinner.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo/Logo.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo/Logo.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItems.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/SiteDrawer.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItems.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button/Button.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button/Button.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary/OrderSummary.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar/Toolbar.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar/Toolbar.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary/OrderSummary.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/build/index.html",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/build/asset-manifest.json",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/index.html",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/axios-orders.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Backdrop/Backdrop.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Backdrop/Backdrop.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControl/BuildControl.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burger.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/Checkout.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/ContactData/ContactData.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/ContactData/ContactData.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/CheckoutSummary/CheckoutSummary.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/CheckoutSummary/CheckoutSummary.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Layout/Layout.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.module.css",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/CheckoutSummary",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/README.md",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/.gitignore",
@@ -1033,24 +839,17 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.js",
 		"/C/Users/lenovo/Desktop/kurs/NOTATKI/UZYWANIE USE EFFECT COMPONENT DID MOUNT ZAPYTANIA HTTP.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/assets/images/logo.png",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Auxiliary.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients/BurgerIngredient.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BurgerIngredients/BurgerIngredient.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burger.module.css",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControls.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/ BuildControl/BuildControl.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/ BuildControl/BuildControl.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/App.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burgeringridients/Burgeringridients.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBulder/BurgerBuilder.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/public/index.html",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/project.sublime-project",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/config/webpack.config.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/.git/COMMIT_EDITMSG",
 		"/C/Users/lenovo/Desktop/kurs/react-complete-guide/.git/COMMIT_EDITMSG",
@@ -1143,53 +942,24 @@
 	"groups":
 	[
 		{
-			"selected": 33,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/hoc/withErrorHandler/withErrorHandler.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1059,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								655,
-								655
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4813,
+						"buffer_size": 4320,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2076,
-								2076
+								4120,
+								4120
 							]
 						],
 						"settings":
@@ -1200,1023 +970,67 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1734.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/components/UI/Spinner/Spinner.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/components/UI/Spinner/Spinner.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1289,
-								1289
-							]
-						],
-						"settings":
-						{
-							"auto_name": ".Sk-chase {",
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 847.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 24,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/components/Layout/Layout.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 955,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 309.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 27,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								439,
-								439
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 77.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 26,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/components/Layout/Layout.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 40,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/components/Logo/Logo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 243,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 33,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/components/Logo/Logo.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 141,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 37,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 433,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								240,
-								240
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 723,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								224,
-								224
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 32,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								392,
-								392
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/components/Navigation/NavigationItems/NavigationItems.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 209,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 39,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 388,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227,
-								227
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 762,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								113,
-								113
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "src/components/UI/Button/Button.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								101,
-								101
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "src/components/UI/Button/Button.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 256,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								159
-							]
-						],
-						"settings":
-						{
-							"auto_name": "import",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "src/components/OrderSummary/OrderSummary.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 901,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								747,
-								747
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "src/components/Navigation/Toolbar/Toolbar.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 570,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								442,
-								442
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "src/components/Navigation/Toolbar/Toolbar.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								304,
-								304
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 32.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 31,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "src/components/OrderSummary/OrderSummary.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 104,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								52
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 38,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "src/components/UI/Modal/Modal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								328,
-								328
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 31.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "build/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 28,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "build/asset-manifest.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1365,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 29,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								128,
-								128
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "src/axios-orders.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								126,
-								126
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": "src/components/UI/Backdrop/Backdrop.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 217,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 75.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "src/components/UI/Backdrop/Backdrop.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								110,
-								110
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 41,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 35,
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "src/components/Burger/BuildControls/BuildControls.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1564,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51,
-								57
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "src/components/Burger/BuildControls/BuildControl/BuildControl.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								104,
-								104
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 172.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 31,
-					"file": "src/components/Burger/Burger.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 777,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								213,
-								213
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 32,
-					"file": "src/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 621,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								418,
-								471
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2137.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
-					"file": "src/containers/Checkout/Checkout.js",
+					"buffer": 1,
+					"file": "src/components/UI/Input/Input.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1127,
+						"buffer_size": 607,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1066,
-								1051
+								145,
+								145
 							]
 						],
 						"settings":
 						{
+							"auto_name": "import Rea",
 							"incomplete_sync": null,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 344.0,
+						"translation.y": 59.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
-					"file": "src/containers/Checkout/ContactData/ContactData.js",
+					"buffer": 2,
+					"file": "src/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 899,
+						"buffer_size": 659,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
+								552,
+								552
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2226,113 +1040,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
-					"file": "src/components/Order/CheckoutSummary/CheckoutSummary.js",
+					"buffer": 3,
+					"file": "src/components/UI/Input/Input.module.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 621,
+						"buffer_size": 392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 36,
-					"file": "src/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								263,
-								263
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 37,
-					"file": "src/App.test.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 38,
-					"file": "src/components/Order/CheckoutSummary/CheckoutSummary.module.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								121,
-								121
+								208,
+								208
 							]
 						],
 						"settings":
@@ -2344,16 +1065,295 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/containers/Checkout/Checkout.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1284,
+								1284
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 480.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								264,
+								264
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								83
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/containers/Checkout/ContactData/ContactData.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1654,
+								1654
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 787.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/containers/Checkout/ContactData/ContactData.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 39,
-					"file": "src/hoc/Layout/Layout.js",
+					"buffer": 9,
+					"file": "src/containers/Orders/Orders.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 986,
+						"buffer_size": 1034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								862,
+								862
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import Rea",
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/Order/Order.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								561,
+								561
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 36.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/components/Order/Order.module.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								108
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/components/Navigation/NavigationItems/NavigationItems.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
 						"regions":
 						{
 						},
@@ -2369,63 +1369,30 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 40,
-					"file": "src/components/UI/Modal/Modal.module.css",
+					"buffer": 14,
+					"file": "src/hoc/Layout/Layout.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 324,
+						"buffer_size": 985,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 36,
-					"type": "text"
-				},
-				{
-					"buffer": 41,
-					"file": "src/components/Burger/BuildControls/BuildControls.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								984,
+								984
 							]
 						],
 						"settings":
@@ -2437,10 +1404,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 525.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/components/Message/Message.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -2531,7 +1527,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 240.0,
+	"side_bar_width": 243.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

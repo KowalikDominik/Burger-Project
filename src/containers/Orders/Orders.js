@@ -14,23 +14,36 @@ class Orders extends Component {
 		axios.get('orders.json')
 			.then(response => {
 				const fetchedArray = [];
+				let count = 0;
 				for (let key in response.data) {
+					count++;
 					fetchedArray.push({
 						...response.data[key],
-						id: key 
+						id: key,
+						orderNo: count 
 					});
 				}
+
+        fetchedArray.sort(function (a, b) {
+  			  if (a.orderNo < b.orderNo)
+       			return 1;
+    			else if (a.orderNo > b.orderNo)
+        		return -1;
+    			else
+        		return 0;
+				});
+
 				this.setState({loading: false, orders: fetchedArray});
-				console.log(response.data);
 			})
 			.catch(error => this.setState({loading: false}))
 	}
 
 	render() {
+		console.log(this.state.orders)
 		let orders = <Spinner />
 		if ( !this.state.loading ) {
 			orders = this.state.orders.map(order => (
-					<Order key={order.id} ingredients={order.ingredients} price={order.price} />
+					<Order key={order.id} orderNo={order.orderNo} ingredients={order.ingredients} price={order.price} />
 					));
 		}
 		return(
