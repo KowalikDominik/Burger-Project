@@ -63,7 +63,8 @@ class ContactData extends Component {
 					elementConfig: {
 						options: [
 						{value: 'poczta', displayValue: 'Poczta Polska'},
-						{value: 'kurier', displayValue: 'Kurier'}]
+						{value: 'kurier', displayValue: 'Kurier'}],
+						placeholder: 'Delivey Mathod'
 					},
 					value: ''
 				}
@@ -73,19 +74,16 @@ class ContactData extends Component {
 	orderHandler = (event) => {
 		event.preventDefault();
 		this.setState({ loading: true });
+		
+		const formData = {};
+		for (let imputElement in this.state.orderForm) {
+			formData[imputElement] = this.state.orderForm[imputElement].value;
+		}
+
 		const order = {
 			ingredients: this.props.ingredients,
 			price: this.props.totalPrice,
-			customer: {
-				name: 'Dominik Kowalik',
-				address: {
-					street: 'wileńska 10',
-					postalCode: '20-603',
-					city: 'Poland'
-				},
-				phone: '654876123',
-				email: 'gmko@gm.pl'
-			}
+			orderData: formData
 		}
 
 		axios.post('orders.json',order)
@@ -99,6 +97,19 @@ class ContactData extends Component {
 			})
 			.catch(error => this.setState({ loading: false}));
 
+	}
+
+	inputChangedHandler = (event, elementId) => {
+		const updatedForm = {
+			...this.state.orderForm
+		};
+		const updatedElement = {
+			...updatedForm[elementId]
+		};
+		updatedElement.value = event.target.value;
+		updatedForm[elementId] = updatedElement;
+		this.setState({orderForm: updatedForm});
+		console.log(this.state.orderForm);
 	}
 
 	render(){
@@ -115,7 +126,8 @@ class ContactData extends Component {
 				key={element.id}
 				elementType={element.type}
 				elementConfig={ element.config.elementConfig }
-				value={element.config.value}/>
+				value={element.config.value}
+				changed={(event) => this.inputChangedHandler(event, element.id)}/>
 			));
 		let orderFormDisplay = (
 			<Aux>
