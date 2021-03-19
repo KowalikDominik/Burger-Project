@@ -1,13 +1,24 @@
 import React from 'react';
 import classes from './NavigationItems.module.css';
-import NavigationItem from './NavigationItem/NavigationItem'
+import NavigationItem from './NavigationItem/NavigationItem';
+import { withRouter } from "react-router";
 
-const navigationItems = () => (
-	<ul className={classes.NavigationItems}>
-		<NavigationItem link="/" exact >Burger Builder</NavigationItem>
-		<NavigationItem link="/orders">Orders</NavigationItem>
-		<NavigationItem link="/contact">Contact</NavigationItem>
-	</ul>
-)
+const navigationItems = (props) => {
+	let activeLink = false;
+	const path = props.location.pathname
+	if ( (path === '/checkout')
+		|| (path === '/')
+		|| (path === '/checkout/contact-data')) {
+		activeLink = true;
+	}
+	console.log('nav render');
+	return(
+		<ul className={classes.NavigationItems}>
+			<NavigationItem link="/" exact extraActive={() => (activeLink)}>Burger Builder</NavigationItem>
+			<NavigationItem link="/orders" exact>Orders</NavigationItem>
+			<NavigationItem link="/contact" exact>Contact</NavigationItem>
+		</ul>
+	)
+}
 
-export default navigationItems
+export default withRouter(navigationItems);

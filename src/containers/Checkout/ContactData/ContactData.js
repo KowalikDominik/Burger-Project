@@ -9,17 +9,66 @@ import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
 	state = {
-		name: '',
-		email: '',
-		address: {
-			street: '',
-			postalCode: '',
-			city: ''
-		},
-		phone: '',
-		loading: false,
-		purchasing: false
-	}
+			orderForm: {
+				name: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Your name',
+					},
+					value: ''
+				},
+				email: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'email',
+						placeholder: 'Your e-mail',
+					},
+					value: ''
+				},
+				street: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Street',
+					},
+					value: ''
+				},
+				postalCode: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Postal Code',
+					},
+					value: ''
+				},
+				city: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'City',
+					},
+					value: ''
+				},
+				tel: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'tel',
+						placeholder: 'Phone number',
+					},
+					value: ''
+				},
+				deliveryMethod: {
+					elementType: 'select',
+					elementConfig: {
+						options: [
+						{value: 'poczta', displayValue: 'Poczta Polska'},
+						{value: 'kurier', displayValue: 'Kurier'}]
+					},
+					value: ''
+				}
+			}
+		}
 
 	orderHandler = (event) => {
 		event.preventDefault();
@@ -53,28 +102,39 @@ class ContactData extends Component {
 	}
 
 	render(){
-		let contactForm = (
-		<Aux>
-			<h4>Enter your contact data</h4>
-			<Button btnType="Danger">Autofill for testing</Button>	
-			<form>
-				<Input inputtype="input" label="Your Name:" type="text" name="name" placeholder="Your name" />
-				<Input inputtype="input" label="E-mail:" type="email" name="email" placeholder="Your e-mail" />
-				<Input inputtype="input" label="Street:" type="text" name="street" placeholder="Street name" />
-				<Input inputtype="input" label="Zip-code:" type="text" name="postalCode" pattern="[0-9]{5}" placeholder="Postal code" />
-				<Input inputtype="input" label="City:" type="text" name="city" placeholder="City name" />
-				<Input inputtype="input" label="Phone number" type="tel" name="phone"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Your phone number" />
-				<Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
-			</form>
-		</Aux>);
+		const formElements = [];
+		for (let element in this.state.orderForm) {
+			formElements.push({
+				id: element,
+				type: this.state.orderForm[element].elementType,
+				config: this.state.orderForm[element]
+			});
+		}
+		const allFormElements = formElements.map(element => (
+			<Input
+				key={element.id}
+				elementType={element.type}
+				elementConfig={ element.config.elementConfig }
+				value={element.config.value}/>
+			));
+		let orderFormDisplay = (
+			<Aux>
+				<h4>Enter your contact data</h4>
+				<Button btnType="Danger">Autofill for testing</Button>	
+				<form>
+					{allFormElements}
+					
+					<Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
+				</form>
+			</Aux>);
 
 		if(this.state.loading) {
-			contactForm = <Spinner />;
+			orderFormDisplay = <Spinner />;
 		}
 
 		return(
 			<div className={classes.ContactData}>
-				{contactForm}		
+				{orderFormDisplay}		
 			</div>
 			)
 	}

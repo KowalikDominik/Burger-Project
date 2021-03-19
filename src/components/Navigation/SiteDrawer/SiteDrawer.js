@@ -9,7 +9,7 @@ const siteDrawer = (props) => {
 
 	let attechedClasses = [classes.SiteDrawer, classes.Close];
 	if (props.open) attechedClasses = [classes.SiteDrawer, classes.Open];
-
+console.log('reloaf');
 	return(
 		<Aux>
 			<Backdrop show={props.open} clicked={props.closed}/>

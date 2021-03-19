@@ -21,9 +21,9 @@ const order = (props) => {
 	console.log(props.key);
 	return(
 		<div className={classes.Order}>
-			<p>Order {props.orderNo}</p>
+			<p>Burger No. {props.orderNo}</p>
 			<p>Ingredients: {ingredientsOut}</p>
-			<p>Price: {props.price}</p>
+			<p>Price: <strong>{props.price}</strong></p>
 		</div>
 		)
 }
