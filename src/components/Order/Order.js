@@ -17,8 +17,8 @@ const order = (props) => {
 			style={classes.Span}>
 			{ingr.name}(<strong>{ingr.amount}</strong>)
 		</span>
-	})
-	console.log(props.key);
+	});
+	
 	return(
 		<div className={classes.Order}>
 			<p>Burger No. {props.orderNo}</p>

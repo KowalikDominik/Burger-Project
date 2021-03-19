@@ -16,7 +16,11 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Your name',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				email: {
 					elementType: 'input',
@@ -24,7 +28,11 @@ class ContactData extends Component {
 						type: 'email',
 						placeholder: 'Your e-mail',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				street: {
 					elementType: 'input',
@@ -32,7 +40,11 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Street',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				postalCode: {
 					elementType: 'input',
@@ -40,7 +52,11 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Postal Code',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				city: {
 					elementType: 'input',
@@ -48,7 +64,11 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'City',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				tel: {
 					elementType: 'input',
@@ -56,7 +76,11 @@ class ContactData extends Component {
 						type: 'tel',
 						placeholder: 'Phone number',
 					},
-					value: ''
+					value: '',
+					validation: {
+						required: true
+					},
+					valid: false
 				},
 				deliveryMethod: {
 					elementType: 'select',
@@ -70,6 +94,16 @@ class ContactData extends Component {
 				}
 			}
 		}
+
+	checkValidity = (value, rules) => {
+		let isValid = false;
+
+		if (rules.required) {
+			isValid = value.trim() !== '';
+		}
+
+		return isValid;
+	}
 
 	orderHandler = (event) => {
 		event.preventDefault();
@@ -107,9 +141,99 @@ class ContactData extends Component {
 			...updatedForm[elementId]
 		};
 		updatedElement.value = event.target.value;
+		updatedElement.valid = this.checkValidity(updatedElement.value, updatedElement.validation);
 		updatedForm[elementId] = updatedElement;
 		this.setState({orderForm: updatedForm});
 		console.log(this.state.orderForm);
+	}
+
+	autoFillMethod = () => {
+		this.setState({
+			orderForm: {
+				name: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Your name',
+					},
+					value: 'John Deere',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				email: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'email',
+						placeholder: 'Your e-mail',
+					},
+					value: 'john@deere.com',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				street: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Street',
+					},
+					value: 'Farmers street 64',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				postalCode: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'Postal Code',
+					},
+					value: '1023',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				city: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'text',
+						placeholder: 'City',
+					},
+					value: 'Greens',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				tel: {
+					elementType: 'input',
+					elementConfig: {
+						type: 'tel',
+						placeholder: 'Phone number',
+					},
+					value: '523655231',
+					validation: {
+						required: true
+					},
+					valid: false
+				},
+				deliveryMethod: {
+					elementType: 'select',
+					elementConfig: {
+						options: [
+						{value: 'poczta', displayValue: 'Poczta Polska'},
+						{value: 'kurier', displayValue: 'Kurier'}],
+						placeholder: 'Delivey Mathod'
+					},
+					value: ''
+				}
+			}			
+		});
 	}
 
 	render(){
@@ -132,11 +256,11 @@ class ContactData extends Component {
 		let orderFormDisplay = (
 			<Aux>
 				<h4>Enter your contact data</h4>
-				<Button btnType="Danger">Autofill for testing</Button>	
-				<form>
+				<Button btnType="Danger" clicked={this.autoFillMethod}>Autofill for testing</Button>	
+				<form onSubmit={this.orderHandler}>
 					{allFormElements}
 					
-					<Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
+					<Button btnType="Success">ORDER</Button>
 				</form>
 			</Aux>);
 
