@@ -6,7 +6,8 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import { withRouter } from "react-router";
 import Input from '../../../components/UI/Input/Input';
-import Message from '../../../components/Message/Message';
+import Modal from '../../../components/UI/Modal/Modal';
+
 class ContactData extends Component {
 	state = {
 			orderForm: {
@@ -187,9 +188,15 @@ class ContactData extends Component {
 	showMessageModal = (event) => {
 		event.preventDefault();
 		if ( !this.state.formIsValid ) {
-			this.setState({showErrorMessage: true})
+			this.setState({showErrorMessage: true});
 		}
+		let timer = null;
+		timer = setTimeout(() => {
+			clearTimeout(timer);
+			this.setState({showErrorMessage: false});
+		},2000);
 	}
+
 	closedMessageModal = () => {
 		this.setState({showErrorMessage: false})
 	}
@@ -308,12 +315,13 @@ class ContactData extends Component {
 
 		let orderFormDisplay = (
 			<Aux>
-			<Message
+			<Modal
 					type="Danger"
 					fast
 					show={this.state.showErrorMessage}
-					close={this.closedMessageModal}
-					content="Form is not valid. Please enter correct data."/>
+					close={this.closedMessageModal} >
+					Form is not valid. Please enter correct data.
+			</Modal>
 			<h4>Enter your contact data</h4>
 				<Button
 					btnType="Danger"

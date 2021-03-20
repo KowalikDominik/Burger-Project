@@ -4,11 +4,11 @@ import Modal from '../UI/Modal/Modal';
 class Message extends Component  {
 
 
-
 	render() {
+
 		return(
 			<Modal
-				show={this.props.show}
+				show={this.state.show}
 				close={this.props.close}
 				type={this.props.type}>
 			{this.props.content}

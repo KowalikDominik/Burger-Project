@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"props"
+			],
+			[
+				"next",
+				"nextProps"
+			],
+			[
+				"MODAL",
+				"modalshow"
+			],
+			[
+				"s",
+				"state"
+			],
+			[
+				"se",
+				"setState"
+			],
+			[
+				"time",
+				"timeout\tsetTimeout function"
+			],
+			[
 				"show",
 				"showErrorMessage"
 			],
@@ -288,20 +312,12 @@
 				"purchasing"
 			],
 			[
-				"next",
-				"nextState"
-			],
-			[
 				"clicked",
 				"clickedIcon"
 			],
 			[
 				"Dra",
 				"DarawerToggle"
-			],
-			[
-				"s",
-				"state"
 			],
 			[
 				"sie",
@@ -498,22 +514,6 @@
 			[
 				"login",
 				"loginHandler"
-			],
-			[
-				"TO",
-				"toggleBtnRef"
-			],
-			[
-				"fun",
-				"func"
-			],
-			[
-				"chan",
-				"changeCounter"
-			],
-			[
-				"fR",
-				"Fragment"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "src/containers/Checkout/ContactData/ContactData.js",
 			"settings":
 			{
-				"buffer_size": 7632,
+				"buffer_size": 7761,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -533,6 +533,7 @@
 			"settings":
 			{
 				"buffer_size": 308,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -540,7 +541,7 @@
 			"file": "src/components/UI/Modal/Modal.js",
 			"settings":
 			{
-				"buffer_size": 1244,
+				"buffer_size": 981,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -734,6 +735,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/node_modules/@babel/core/lib/config/config-chain.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Message/Message.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Order/Order.js",
@@ -770,7 +772,6 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar/Toolbar.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar/Toolbar.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/OrderSummary/OrderSummary.module.css",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal/Modal.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/build/index.html",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/build/asset-manifest.json",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/index.html",
@@ -899,7 +900,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -908,15 +909,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7632,
+						"buffer_size": 7761,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6932,
-								6932
+								7115,
+								7115
 							]
 						],
 						"settings":
@@ -928,16 +929,16 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4648.0,
+						"translation.y": 4314.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
 					"file": "src/components/Message/Message.js",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 308,
@@ -947,8 +948,40 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/UI/Modal/Modal.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								245
 							]
 						],
 						"settings":
@@ -964,38 +997,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/components/UI/Modal/Modal.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1244,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								240,
-								240
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 442.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				},
 				{
