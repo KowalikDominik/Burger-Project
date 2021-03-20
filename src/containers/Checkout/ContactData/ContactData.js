@@ -6,7 +6,7 @@ import Spinner from '../../../components/UI/Spinner/Spinner';
 import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import { withRouter } from "react-router";
 import Input from '../../../components/UI/Input/Input';
-
+import Message from '../../../components/Message/Message';
 class ContactData extends Component {
 	state = {
 			orderForm: {
@@ -18,9 +18,12 @@ class ContactData extends Component {
 					},
 					value: '',
 					validation: {
-						required: true
+						required: true,
+						minLength: 3
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				email: {
 					elementType: 'input',
@@ -32,7 +35,9 @@ class ContactData extends Component {
 					validation: {
 						required: true
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				street: {
 					elementType: 'input',
@@ -42,9 +47,12 @@ class ContactData extends Component {
 					},
 					value: '',
 					validation: {
-						required: true
+						required: true,
+						minLength: 3
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				postalCode: {
 					elementType: 'input',
@@ -54,9 +62,13 @@ class ContactData extends Component {
 					},
 					value: '',
 					validation: {
-						required: true
+						required: true,
+						minLength: 4,
+						maxLength: 5
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				city: {
 					elementType: 'input',
@@ -68,7 +80,9 @@ class ContactData extends Component {
 					validation: {
 						required: true
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				tel: {
 					elementType: 'input',
@@ -78,9 +92,12 @@ class ContactData extends Component {
 					},
 					value: '',
 					validation: {
-						required: true
+						required: true,
+						minLength: 8
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				deliveryMethod: {
 					elementType: 'select',
@@ -90,20 +107,13 @@ class ContactData extends Component {
 						{value: 'kurier', displayValue: 'Kurier'}],
 						placeholder: 'Delivey Mathod'
 					},
-					value: ''
+					value: '',
+					valid: true
 				}
-			}
+			},
+			formIsValid: false,
+			showErrorMessage: false
 		}
-
-	checkValidity = (value, rules) => {
-		let isValid = false;
-
-		if (rules.required) {
-			isValid = value.trim() !== '';
-		}
-
-		return isValid;
-	}
 
 	orderHandler = (event) => {
 		event.preventDefault();
@@ -133,6 +143,22 @@ class ContactData extends Component {
 
 	}
 
+	checkValidity = (value, rules) => {
+		let invalidError = '';
+
+		if (rules.required && value.trim() === '') {
+			invalidError = 'This field is required!';
+		}
+		else if (rules.minLength && value.length < rules.minLength ) {
+			invalidError = 'Enter more characters.';
+		}
+		else if (rules.maxLength && value.length >= rules.maxLength ) {
+			invalidError = 'Too many characters.';
+		}
+		console.log(invalidError);
+		return invalidError;
+	}
+
 	inputChangedHandler = (event, elementId) => {
 		const updatedForm = {
 			...this.state.orderForm
@@ -141,10 +167,31 @@ class ContactData extends Component {
 			...updatedForm[elementId]
 		};
 		updatedElement.value = event.target.value;
-		updatedElement.valid = this.checkValidity(updatedElement.value, updatedElement.validation);
+		updatedElement.touched = true;
+		updatedElement.invalidMsg = this.checkValidity(updatedElement.value, updatedElement.validation);
+		updatedElement.valid = updatedElement.invalidMsg === '';
 		updatedForm[elementId] = updatedElement;
-		this.setState({orderForm: updatedForm});
-		console.log(this.state.orderForm);
+		console.log(updatedForm);
+		
+		let formIsValid = true;
+		for ( let formElement in updatedForm ) {
+			formIsValid = updatedForm[formElement].valid && formIsValid;
+		}
+
+		this.setState({
+			orderForm: updatedForm,
+			formIsValid: formIsValid});
+
+	}
+
+	showMessageModal = (event) => {
+		event.preventDefault();
+		if ( !this.state.formIsValid ) {
+			this.setState({showErrorMessage: true})
+		}
+	}
+	closedMessageModal = () => {
+		this.setState({showErrorMessage: false})
 	}
 
 	autoFillMethod = () => {
@@ -237,6 +284,7 @@ class ContactData extends Component {
 	}
 
 	render(){
+		console.log('render form');
 		const formElements = [];
 		for (let element in this.state.orderForm) {
 			formElements.push({
@@ -251,16 +299,34 @@ class ContactData extends Component {
 				elementType={element.type}
 				elementConfig={ element.config.elementConfig }
 				value={element.config.value}
+				invalid={!element.config.valid}
+				shouldValid={element.config.validation}
+				touched={element.config.touched}
+				invalidMessage={element.config.invalidMsg}
 				changed={(event) => this.inputChangedHandler(event, element.id)}/>
 			));
+
 		let orderFormDisplay = (
 			<Aux>
-				<h4>Enter your contact data</h4>
-				<Button btnType="Danger" clicked={this.autoFillMethod}>Autofill for testing</Button>	
+			<Message
+					type="Danger"
+					fast
+					show={this.state.showErrorMessage}
+					close={this.closedMessageModal}
+					content="Form is not valid. Please enter correct data."/>
+			<h4>Enter your contact data</h4>
+				<Button
+					btnType="Danger"
+					clicked={this.autoFillMethod}>
+					Autofill for testing
+				</Button>	
 				<form onSubmit={this.orderHandler}>
-					{allFormElements}
-					
-					<Button btnType="Success">ORDER</Button>
+					{allFormElements}				
+					<Button
+						btnType={!this.state.formIsValid ? "IsDisabled" : "Success"}
+						clicked={this.showMessageModal}>
+						ORDER
+					</Button>
 				</form>
 			</Aux>);
 

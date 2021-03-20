@@ -143,9 +143,15 @@ class BurgerBuilder extends Component {
 				continuedOrder={this.purchaseContinueHandler}
 				price={this.state.totalPrice} />;
 		}
+
+		let modalMessage = null
+		if( this.props.location.search === '?orderSuccess' ) {
+			modalMessage = <Message content="Order Success!" />;
+		}
+
 		return (
 			<Aux>
-				<Message path={this.props.location.search} />
+				{modalMessage}
 				<Modal show={this.state.purchasing} close={this.purchaseCancelHandler}>
 					{orderSummary}
 				</Modal>

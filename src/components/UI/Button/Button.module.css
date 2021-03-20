@@ -25,6 +25,17 @@
 	position:relative;
 	top:1px;
 }
+.IsDisabled {
+	color: #000;
+	border-color: #ccc;
+	background-color:#ccc;
+}
+.IsDisabled:hover {
+	background-color:#ccc;
+}
+.IsDisabled:active {
+	background-color:#ccc;
+}
 .Success {
 	background-color:#44c767;
 	border:1px solid #18ab29;

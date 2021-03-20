@@ -1,15 +1,20 @@
 .Modal {
-	position: absolute;
 	z-index: 500;
 	background-color: white;
 	width: 70%;
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	box-shadow: 1px 1px 1px black;
 	padding: 16px;
-	left: 15%;
-	top: 30%;
+	position: fixed;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
 	box-sizing: border-box;
 	transition: all 0.3s ease-out;
+}
+.Danger {
+	background-color: #d9534f;
+	color: white;
 }
 @media (min-width: 600px) {
 	.Modal {
