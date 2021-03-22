@@ -16,6 +16,10 @@
 	background-color: #d9534f;
 	color: white;
 }
+.Success {
+	background-color: #d9534f;
+	color: white;
+}
 @media (min-width: 600px) {
 	.Modal {
 		width: 500px;

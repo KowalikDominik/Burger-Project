@@ -27,6 +27,7 @@ class BurgerBuilder extends Component {
 		purchasing: false,
 		loading: false,
 		error: false,
+		success: false
 	};
 
 	componentDidMount () {
@@ -35,6 +36,16 @@ class BurgerBuilder extends Component {
 			this.setState({ingredients: response.data})
 		})
 		.catch(error => this.setState({error: true}));
+
+		if( this.props.location.search === '?orderSuccess' ) {
+			this.setState({success: true});
+			let timer = null;
+			timer = setTimeout(() => {
+				clearTimeout(timer);
+				this.setState({success: false});
+			},2000);
+		}
+
 	}
 
 	purchaseHandler = () => {
@@ -144,14 +155,9 @@ class BurgerBuilder extends Component {
 				price={this.state.totalPrice} />;
 		}
 
-		let modalMessage = null
-		if( this.props.location.search === '?orderSuccess' ) {
-			modalMessage = <Message content="Order Success!" />;
-		}
-
 		return (
 			<Aux>
-				{modalMessage}
+				<Modal show={this.state.success} type="Success">Order Success!</Modal>;
 				<Modal show={this.state.purchasing} close={this.purchaseCancelHandler}>
 					{orderSummary}
 				</Modal>

@@ -172,10 +172,11 @@ class ContactData extends Component {
 		updatedElement.invalidMsg = this.checkValidity(updatedElement.value, updatedElement.validation);
 		updatedElement.valid = updatedElement.invalidMsg === '';
 		updatedForm[elementId] = updatedElement;
-		console.log(updatedForm);
+		//console.log(updatedForm);
 		
 		let formIsValid = true;
 		for ( let formElement in updatedForm ) {
+			console.log(updatedForm[formElement].valid);
 			formIsValid = updatedForm[formElement].valid && formIsValid;
 		}
 
@@ -185,19 +186,19 @@ class ContactData extends Component {
 
 	}
 
-	showMessageModal = (event) => {
-		event.preventDefault();
+	checkAfterSubmitHandler = (event) => {
 		if ( !this.state.formIsValid ) {
+			event.preventDefault();
 			this.setState({showErrorMessage: true});
+			let timer = null;
+			timer = setTimeout(() => {
+				clearTimeout(timer);
+				this.setState({showErrorMessage: false});
+			},2000);
 		}
-		let timer = null;
-		timer = setTimeout(() => {
-			clearTimeout(timer);
-			this.setState({showErrorMessage: false});
-		},2000);
 	}
 
-	closedMessageModal = () => {
+	closedErrorMessage = () => {
 		this.setState({showErrorMessage: false})
 	}
 
@@ -210,11 +211,14 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Your name',
 					},
-					value: 'John Deere',
+					value: 'Json Burger',
 					validation: {
-						required: true
+						required: true,
+						minLength: 3
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				email: {
 					elementType: 'input',
@@ -222,11 +226,13 @@ class ContactData extends Component {
 						type: 'email',
 						placeholder: 'Your e-mail',
 					},
-					value: 'john@deere.com',
+					value: 'spam@confirmed.eu',
 					validation: {
 						required: true
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				street: {
 					elementType: 'input',
@@ -234,11 +240,14 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Street',
 					},
-					value: 'Farmers street 64',
+					value: 'Components street 16',
 					validation: {
-						required: true
+						required: true,
+						minLength: 3
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				postalCode: {
 					elementType: 'input',
@@ -246,11 +255,15 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'Postal Code',
 					},
-					value: '1023',
+					value: '12430',
 					validation: {
-						required: true
+						required: true,
+						minLength: 4,
+						maxLength: 5
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				city: {
 					elementType: 'input',
@@ -258,11 +271,13 @@ class ContactData extends Component {
 						type: 'text',
 						placeholder: 'City',
 					},
-					value: 'Greens',
+					value: 'React',
 					validation: {
 						required: true
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				tel: {
 					elementType: 'input',
@@ -270,11 +285,14 @@ class ContactData extends Component {
 						type: 'tel',
 						placeholder: 'Phone number',
 					},
-					value: '523655231',
+					value: '543121768',
 					validation: {
-						required: true
+						required: true,
+						minLength: 8
 					},
-					valid: false
+					valid: false,
+					touched: false,
+					invalidMsg: ''
 				},
 				deliveryMethod: {
 					elementType: 'select',
@@ -284,9 +302,11 @@ class ContactData extends Component {
 						{value: 'kurier', displayValue: 'Kurier'}],
 						placeholder: 'Delivey Mathod'
 					},
-					value: ''
+					value: '',
+					valid: true
 				}
-			}			
+		},
+		formIsValid: true
 		});
 	}
 
@@ -317,9 +337,8 @@ class ContactData extends Component {
 			<Aux>
 			<Modal
 					type="Danger"
-					fast
 					show={this.state.showErrorMessage}
-					close={this.closedMessageModal} >
+					close={this.closedErrorMessage} >
 					Form is not valid. Please enter correct data.
 			</Modal>
 			<h4>Enter your contact data</h4>
@@ -332,7 +351,7 @@ class ContactData extends Component {
 					{allFormElements}				
 					<Button
 						btnType={!this.state.formIsValid ? "IsDisabled" : "Success"}
-						clicked={this.showMessageModal}>
+						clicked={this.checkAfterSubmitHandler}>
 						ORDER
 					</Button>
 				</form>

@@ -5,10 +5,16 @@ import Aux from '../../../hoc/Auxiliary/Auxiliary'
 
 class Modal extends Component {
 
-shouldComponentUpdate(nextProps, nextState) {
-	return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
 }
-
+	
+	componentWillUnmount() {
+		const body = document.body;
+		body.style.top = '';
+		body.style.height = '';
+		body.style.overflowY = '';
+	}
 
 	render(){
 		
