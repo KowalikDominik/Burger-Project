@@ -6,7 +6,7 @@ const clicks = () => {
 	const divs = document.body.getElementsByTagName('div');
 	for ( let div in divs ) {
 		const testedDiv = divs[div].className;
-		if ( testedDiv && testedDiv.includes('DrawerToggle')) {
+		if ( testedDiv && testedDiv.includes('DrawerToggle') && testedDiv.display === 'block') {
 			divs[div].click();
 		}
 	}
