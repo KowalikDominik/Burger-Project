@@ -8,7 +8,9 @@ class Layout extends Component {
 	state = {
 		siteDrawerShow : false
 	};
-
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextState.siteDrawerShow !== this.state.siteDrawerShow || nextProps.children !== this.props.children;
+	}
 	setSiteDrawerClose = () => {
 		this.setState({siteDrawerShow: false})
 	};

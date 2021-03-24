@@ -4,45 +4,38 @@
 	align-items: center;
 	margin: 5px 0;
 }
+.ButtonContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
 .BuildControl button {
 	display: block;
 	font: inherit;
-	padding: 5px;
-	margin: 0 5px;
-	width: 80px;
-	border: 1px solid #18ab29;
-	border-radius:4px;
+	padding: 2px;
+	width: 50px;
+	border: 0;
 	cursor: pointer;
 	outline: none;
-	font-size:17px;
-	color:#ffffff;
-	background-color:#44c767;
+	font-size:20px;
+	font-weight: bold;
+	color: #F9B71C;
+	background-color: #fff;
 }
-.BuildControl button:hover {
-	background-color:#5cbf2a;
-}
-.BuildControl button:active {
-	position:relative;
-	top:1px;
-}
+
 .BuildControl button:disabled {
-	background-color:#dbb8b6;
 	color: #616161;
 	cursor: default;
 }
 .BuildControl .Less {
-	background-color: #fa5950;
-	border-color: #b53535;
-	color: #fff;
-}
-
-.BuildControl .Less:hover {
-	background-color: #f03c33;
+	border-radius: 5px 0 0 5px;
 }
 
 .BuildControl .More {
-	background-color: #36e825;
-	color: #fff;
+
+	border-radius: 0px 5px 5px 0px;
 }
 .Label {
 	font-weight: bold;
@@ -52,5 +45,5 @@
 .CountLabel {
 	text-align: center;
 	font-weight: bold;
-	width: 30px;
+	width: 20px;
 }

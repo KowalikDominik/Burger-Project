@@ -4,6 +4,7 @@ import NavigationItem from './NavigationItem/NavigationItem';
 import { withRouter } from "react-router";
 
 const navigationItems = (props) => {
+	
 	let activeLink = false;
 	const path = props.location.pathname
 	if ( (path === '/checkout')
@@ -11,7 +12,6 @@ const navigationItems = (props) => {
 		|| (path === '/checkout/contact-data')) {
 		activeLink = true;
 	}
-	console.log('nav render');
 	return(
 		<ul className={classes.NavigationItems}>
 			<NavigationItem link="/" exact extraActive={() => (activeLink)}>Burger Builder</NavigationItem>

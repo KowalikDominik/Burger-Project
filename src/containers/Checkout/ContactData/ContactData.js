@@ -108,7 +108,8 @@ class ContactData extends Component {
 						{value: 'kurier', displayValue: 'Kurier'}],
 						placeholder: 'Delivey Mathod'
 					},
-					value: '',
+					value: 'poczta',
+					validation: {},
 					valid: true
 				}
 			},
@@ -156,7 +157,6 @@ class ContactData extends Component {
 		else if (rules.maxLength && value.length >= rules.maxLength ) {
 			invalidError = 'Too many characters.';
 		}
-		console.log(invalidError);
 		return invalidError;
 	}
 
@@ -172,11 +172,9 @@ class ContactData extends Component {
 		updatedElement.invalidMsg = this.checkValidity(updatedElement.value, updatedElement.validation);
 		updatedElement.valid = updatedElement.invalidMsg === '';
 		updatedForm[elementId] = updatedElement;
-		//console.log(updatedForm);
 		
 		let formIsValid = true;
 		for ( let formElement in updatedForm ) {
-			console.log(updatedForm[formElement].valid);
 			formIsValid = updatedForm[formElement].valid && formIsValid;
 		}
 
@@ -194,7 +192,7 @@ class ContactData extends Component {
 			timer = setTimeout(() => {
 				clearTimeout(timer);
 				this.setState({showErrorMessage: false});
-			},2000);
+			},3000);
 		}
 	}
 
@@ -311,7 +309,6 @@ class ContactData extends Component {
 	}
 
 	render(){
-		console.log('render form');
 		const formElements = [];
 		for (let element in this.state.orderForm) {
 			formElements.push({

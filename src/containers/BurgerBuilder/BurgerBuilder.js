@@ -27,7 +27,11 @@ class BurgerBuilder extends Component {
 		purchasing: false,
 		loading: false,
 		error: false,
-		success: false
+		fastMessage: {
+			show: false,
+			type: '',
+			content: ''
+		}
 	};
 
 	componentDidMount () {
@@ -37,16 +41,19 @@ class BurgerBuilder extends Component {
 		})
 		.catch(error => this.setState({error: true}));
 
-		if( this.props.location.search === '?orderSuccess' ) {
-			this.setState({success: true});
-			let timer = null;
-			timer = setTimeout(() => {
-				clearTimeout(timer);
-				this.setState({success: false});
-			},2000);
+		if ( this.props.location.search === '?orderSuccess' ) {
+			this.setState({
+				fastMessage: {
+					show: true,
+					type: 'Success',
+					content: 'Order Success!'
+				}});
 		}
+	};
 
-	}
+	closeFastMessageHandler = () => {
+		this.setState({fastMessage: {show: false}});
+	};
 
 	purchaseHandler = () => {
 		this.setState({purchasing: true})
@@ -157,8 +164,16 @@ class BurgerBuilder extends Component {
 
 		return (
 			<Aux>
-				<Modal show={this.state.success} type="Success">Order Success!</Modal>;
-				<Modal show={this.state.purchasing} close={this.purchaseCancelHandler}>
+				<Modal
+					fast
+					show={this.state.fastMessage.show}
+					close={this.closeFastMessageHandler}
+					type={this.state.fastMessage.type}>
+					{this.state.fastMessage.content}
+				</Modal>
+				<Modal
+					show={this.state.purchasing}
+					close={this.purchaseCancelHandler}>
 					{orderSummary}
 				</Modal>
 				{burger}

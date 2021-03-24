@@ -2,9 +2,9 @@
 	z-index: 500;
 	background-color: white;
 	width: 70%;
+	min-height: 300px;
 	border: 1px solid #eee;
-	box-shadow: 1px 1px 1px black;
-	padding: 16px;
+	box-shadow: 1px 2px 3px black;
 	position: fixed;
   top: 10vh;
   left: 10vw;
@@ -12,13 +12,25 @@
 	box-sizing: border-box;
 	transition: all 0.3s ease-out;
 }
-.Danger {
-	background-color: #d9534f;
+.Title {
 	color: white;
+	padding: 20px;
+	text-align: left;
+}
+.Content {
+	padding: 16px;
+}
+.Danger {
+	border: 0;
+}
+.Danger .Title {
+	background-color: #F04444;
 }
 .Success {
-	background-color: #d9534f;
-	color: white;
+	border: 0;
+}
+.Success .Title {
+	background-color: #3cc51e;
 }
 @media (min-width: 600px) {
 	.Modal {
