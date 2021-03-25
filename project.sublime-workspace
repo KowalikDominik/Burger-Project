@@ -520,40 +520,46 @@
 	"buffers":
 	[
 		{
-			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+			"file": "src/components/Burger/Burger.test.js",
 			"settings":
 			{
-				"buffer_size": 708,
+				"buffer_size": 769,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/Logo/Logo.js",
+			"file": "src/components/Burger/Burger.js",
 			"settings":
 			{
-				"buffer_size": 320,
+				"buffer_size": 825,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<IfModule mod_rewrite.c>\n  RewriteEngine On\n  RewriteBase /Burger-Project\n  RewriteRule ^index\\.html$ - [L]\n  RewriteCond %{REQUEST_FILENAME} !-f\n  RewriteCond %{REQUEST_FILENAME} !-d\n  RewriteCond %{REQUEST_FILENAME} !-l\n  RewriteRule . /index.html [L]\n</IfModule>",
-			"file": "build/.htaccess",
-			"file_size": 273,
-			"file_write_time": 132610659670101377,
+			"file": "src/components/Order/Order.js",
 			"settings":
 			{
-				"buffer_size": 265,
+				"buffer_size": 653,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/UI/Spinner/Spinner.js",
+			"file": "src/containers/Orders/Orders.js",
 			"settings":
 			{
-				"buffer_size": 184,
+				"buffer_size": 1281,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
+			"settings":
+			{
+				"buffer_size": 4820,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -670,6 +676,7 @@
 	[
 		"/C/Users/lenovo/Desktop/kurs/burger-project",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/build",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/build/static",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
@@ -698,6 +705,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/lenovo/Desktop/kurs/burger-project/build/.htaccess",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo/Logo.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout/ContactData/ContactData.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/package.json",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/Burger.test.js",
@@ -711,10 +721,8 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/BuildControl/BuildControl.js",
 		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/ColorPicker/ColorPicker.sublime-settings",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger/BuildControls/Burger.test.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/build/.htaccess",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/hoc/Layout/Layout.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/Toolbar/Toolbar.js",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItems.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/index.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/SiteDrawer.js",
@@ -737,7 +745,6 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/DrawerToggle/DrawerToggle.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Layout/Layout.module.css",
-		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo/Logo.js",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Logo/Logo.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/SiteDrawer/SiteDrawer.module.css",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Navigation/NavigationItems/NavigationItems.module.css",
@@ -867,56 +874,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
+					"file": "src/components/Burger/Burger.test.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 708,
+						"buffer_size": 769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								357,
-								357
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 109.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/components/Logo/Logo.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								210,
-								210
+								267,
+								267
 							]
 						],
 						"settings":
@@ -934,20 +909,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "build/.htaccess",
+					"buffer": 1,
+					"file": "src/components/Burger/Burger.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 265,
+						"buffer_size": 825,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								510,
+								510
 							]
 						],
 						"settings":
@@ -955,7 +930,8 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -965,20 +941,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/components/UI/Spinner/Spinner.js",
-					"semi_transient": true,
+					"buffer": 2,
+					"file": "src/components/Order/Order.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 184,
+						"buffer_size": 653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								615,
+								615
 							]
 						],
 						"settings":
@@ -986,13 +962,78 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 15.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/containers/Orders/Orders.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1080,
+								1080
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 547.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/containers/BurgerBuilder/BurgerBuilder.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3774,
+								3774
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2053.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1083,7 +1124,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 256.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

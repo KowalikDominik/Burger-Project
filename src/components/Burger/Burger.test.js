@@ -7,8 +7,19 @@ import BurgerIngredient from './BurgerIngredients/BurgerIngredient';
 
 configure({ adapter: new Adapter() });
 
-it('Should not render ingredients when props.ingredients is empty', () => {
-	const wrapper = shallow(<Burger ingredients={[]} />);
-	expect(wrapper.find(BurgerIngredient));
+describe('burger test', () => {
+
+it('Should not render more ingredients when props.ingredients is empty', () => {
+	const wrapper = shallow(<Burger />);
+	wrapper.setProps({ingredients: null});
+	expect(wrapper.find(BurgerIngredient)).toHaveLength(2);
+});
+
+it('Should not show information when props.ingredients is empty', () => {
+	const wrapper = shallow(<Burger />);
+	//wrapper.setProps({ingredients: null});
+	expect(wrapper.contains(<p>Please start adding ingredients.</p>)).toEqual(true);
+});
+
 });
 

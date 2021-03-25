@@ -12,11 +12,11 @@ const order = (props) => {
 	}
 	
 	const ingredientsOut = ingredients.map(ingr => {
-		return <span
+		return ingr.amount !== 0 ? <span
 			key={ingr.name}
 			style={classes.Span}>
 			{ingr.name}(<strong>{ingr.amount}</strong>)
-		</span>
+		</span> : null
 	});
 	
 	return(
@@ -24,6 +24,7 @@ const order = (props) => {
 			<p>Burger No. {props.orderNo}</p>
 			<p>Ingredients: {ingredientsOut}</p>
 			<p>Price: <strong>{props.price}</strong></p>
+			
 		</div>
 		)
 }
