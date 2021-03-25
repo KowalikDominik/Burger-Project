@@ -523,7 +523,7 @@
 			"file": "src/components/Navigation/NavigationItems/NavigationItem/NavigationItem.js",
 			"settings":
 			{
-				"buffer_size": 675,
+				"buffer_size": 708,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -534,6 +534,26 @@
 			{
 				"buffer_size": 320,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<IfModule mod_rewrite.c>\n  RewriteEngine On\n  RewriteBase /Burger-Project\n  RewriteRule ^index\\.html$ - [L]\n  RewriteCond %{REQUEST_FILENAME} !-f\n  RewriteCond %{REQUEST_FILENAME} !-d\n  RewriteCond %{REQUEST_FILENAME} !-l\n  RewriteRule . /index.html [L]\n</IfModule>",
+			"file": "build/.htaccess",
+			"file_size": 273,
+			"file_write_time": 132610659670101377,
+			"settings":
+			{
+				"buffer_size": 265,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/UI/Spinner/Spinner.js",
+			"settings":
+			{
+				"buffer_size": 184,
 				"line_ending": "Windows"
 			}
 		}
@@ -649,6 +669,7 @@
 	"expanded_folders":
 	[
 		"/C/Users/lenovo/Desktop/kurs/burger-project",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/build",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/Burger",
@@ -665,6 +686,7 @@
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Button",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Modal",
+		"/C/Users/lenovo/Desktop/kurs/burger-project/src/components/UI/Spinner",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/BurgerBuilder",
 		"/C/Users/lenovo/Desktop/kurs/burger-project/src/containers/Checkout",
@@ -845,7 +867,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -854,15 +876,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 675,
+						"buffer_size": 708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								513
+								357,
+								357
 							]
 						],
 						"settings":
@@ -873,11 +895,11 @@
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 127.0,
+						"translation.x": 109.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -908,7 +930,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "build/.htaccess",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/UI/Spinner/Spinner.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
