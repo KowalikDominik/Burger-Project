@@ -9,9 +9,11 @@
 /coverage
 
 # production
-#/build
+/build
 
 # misc
+project.sublime-project
+project.sublime-workspace
 .DS_Store
 .env.local
 .env.development.local
