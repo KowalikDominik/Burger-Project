@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Burger-Project/static/css/main.529990cb.chunk.css",
-    "main.js": "/Burger-Project/static/js/main.727fd521.chunk.js",
-    "main.js.map": "/Burger-Project/static/js/main.727fd521.chunk.js.map",
+    "main.js": "/Burger-Project/static/js/main.00a006da.chunk.js",
+    "main.js.map": "/Burger-Project/static/js/main.00a006da.chunk.js.map",
     "runtime-main.js": "/Burger-Project/static/js/runtime-main.c5601f4a.js",
     "runtime-main.js.map": "/Burger-Project/static/js/runtime-main.c5601f4a.js.map",
     "static/js/2.ef30fbff.chunk.js": "/Burger-Project/static/js/2.ef30fbff.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.c5601f4a.js",
     "static/js/2.ef30fbff.chunk.js",
     "static/css/main.529990cb.chunk.css",
-    "static/js/main.727fd521.chunk.js"
+    "static/js/main.00a006da.chunk.js"
   ]
 }
