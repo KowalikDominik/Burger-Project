@@ -1,30 +1,40 @@
 .Burger {
-	width: 100%;
-	margin: auto;
-	height: 250px;
-	overflow-y: scroll;
-	text-align: center;
-	font-weight: bold;
-	font-size: 1.2rem;
+  width: 400px;
+  margin: auto;
+  height: 40vh;
+  overflow-y: scroll;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 400px) {
+  .Burger {
+    width: 80vw;
+  }
+}
+@media screen and (max-height: 500px) {
+  .Burger {
+    width: 50vw;
+  }
+}
+@media screen and (max-height: 400px) {
+  .Burger {
+    width: 30vw;
+  }
+}
+@media screen and (max-height: 650px) {
+  .Burger {
+    height: 37vh;
+  }
 }
 
-@media (min-width: 500px) and (min-height: 400px){
-	.Burger {
-		width: 350px;
-		height: 300px;
-	}
+@media screen and (max-height: 570px) {
+  .Burger {
+    height: 30vh;
+  }
 }
-
-@media (min-width: 500px) and (min-height: 401px){
-	.Burger {
-		width: 450px;
-		height: 400px;
-	}
-}
-
-@media (min-width: 1000px) and (min-height: 700px){
-	.Burger {
-		width: 700px;
-		height: 600px;
-	}
+@media screen and (min-height: 1000px) {
+  .Burger {
+    width: 50vh;
+  }
 }
